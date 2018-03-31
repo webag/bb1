@@ -1,0 +1,297 @@
+.s-top-panel{
+	background: $black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	.container{
+		display: flex;
+		height: 50px;
+		@include res(xl){
+			height: 40px;
+		}
+	}
+}
+
+
+.top-panel-logo{
+	background: #FFF;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 10px;
+	margin-left: 90px;
+	transition: margin 0.3s ease;
+	@include res(xl){
+		width: 80px;
+		margin-left: 70px;
+	}
+	@include res(l){
+		margin-left: 0;
+	}
+
+	a{
+		display: block;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+		transition: opacity 0.3s ease;
+		transform: translate3d(0,0,0);
+
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+}
+
+
+.top-panel-actions{
+	display: flex;
+	align-items: stretch;
+	margin-left: auto;
+	
+	.top-btn{
+		background: transparent;
+		border: none;
+		color: #FFF;
+		font-size: 20px;
+		cursor: pointer;
+		width: 40px;
+		height: 50px;
+		transition: all 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include res(xl){
+			font-size: 18px;
+			height: 40px;
+		}
+
+		&:hover{
+			background: #FFF;
+			color: $black;
+		}
+
+		&:focus{
+			outline: none;
+		}
+
+		&.active{
+			background: #FFF;
+			color: $black;
+		}
+	}
+}
+
+
+//cities-chooser
+.cities-chooser{
+	color: #FFF;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	line-height: 1;
+	margin-right: 30px;
+	@include res(xl){
+		margin-right: 10px;
+	}
+	@include res(l){
+		display: none;
+	}
+
+	&__title{
+		margin-right: 7px;
+	}
+
+	&__current{
+		color: #b4b4b4;
+		border-bottom: 1px solid transparentize(#b4b4b4,0.3);
+		transition: all 0.3s ease;
+		
+		&:hover{
+			color: #FFF;
+			border-bottom: 1px solid #FFF;
+		}
+	}
+}
+//cities-chooser
+
+
+//top-panel-search
+.top-panel-search{
+	display: flex;
+	align-items: stretch;
+	position: relative;
+
+	&__form{
+		width: 40px;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		background: #FFF;
+		padding-left: 14px;
+		z-index: 0;
+		transition: visibility 0.3s ease,opacity 0.3s ease,width 0.3s ease;
+		position: absolute;
+		top: 0;
+		right: 0;
+		visibility: hidden;
+		opacity: 0;
+		height: 100%;
+		@include res(s){
+			width: 210px;
+			right: -40px;
+			position: absolute;
+			top: 100%;
+			border: 1px solid $gray-border;
+			border-top: none;
+			z-index: 2;
+		}
+
+		input{
+			border: none;
+			border-bottom: 1px solid $black;
+			padding: 5px 0;
+			width: 100%;
+			font-size: 13px;
+			flex-shrink: 1;
+			@include res(xl){
+				font-size: 12px;
+			}
+
+			&:focus{
+				outline: none;
+			}
+		}
+
+		.top-btn{
+			color: $black;
+			flex-shrink: 0;
+
+			&:hover{
+				color: $red !important;
+			}
+		}
+
+		&.opened{
+			width: 260px;
+			position: relative;
+			visibility: visible;
+			opacity: 1;
+			margin-right: -40px;
+			z-index: 2;
+			@include res(xl){
+				width: 210px;
+			}
+			@include res(s){
+				position: absolute;
+				margin-right: 0;
+			}
+		}
+	}
+
+	&:hover{
+
+	}
+}
+//top-panel-search
+
+
+//top-panel-user
+.top-panel-user{
+
+}
+//top-panel-user
+
+
+
+//top-panel-basket
+.top-panel-basket{
+	position: relative;
+
+	.top-btn{
+		min-width: 40px;
+		width: auto;
+		padding: 0 5px;
+
+		span{
+			padding-left: 5px;
+			font-size: 18px;
+			@include res(xl){
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.top-basket{
+	position: absolute;
+	top: 100%;
+	right: -1px;
+	border: 1px solid $gray-border;
+	border-top: none;
+	background: #FFF;
+	width: 420px;
+	padding: 20px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.3s ease;
+	@include res(xl){
+		width: 370px;
+	}
+	@include res(s){
+		width: 290px;
+		padding: 20px 10px;
+	}
+
+	&.opened{
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.top-basket-item{
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed $gray-border;
+
+	&:last-child{
+		border: none;
+	}
+
+	img{
+		display: block;
+		height: auto;
+		width: 100px;
+		@include res(s){
+			width: 60px;
+		}
+	}
+
+	&__content{
+		padding-left: 10px;
+	}
+
+	&__title{
+		margin-bottom: 0.5em;
+
+		a{
+			@extend %link-hover-color;
+		}
+	}
+
+	&__param{
+		color: $gray-text;
+		@extend .text-small;
+	}
+}
+//top-panel-basket

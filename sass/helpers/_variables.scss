@@ -1,0 +1,23 @@
+$breakpoints: (
+	'xl': (max-width: 1290px),
+	'l': (max-width: 1024px),
+	'm': (max-width: 768px),
+	's': (max-width: 680px),
+	'xs': (max-width: 480px),
+);
+
+$font: 'Proxima', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-title: 'NewBaskervilleC', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+$font-icon: 'bb1' !important;
+
+$container_width: 1210px;
+
+$gutter: 10px;
+
+$black: #000;
+$red: #ab1b1b;
+$green: #3c9a35;
+$gray-text: #636363;
+$gray-bg: #f0f0f0;
+$gray-interface: #727272;
+$gray-border: #acacac;

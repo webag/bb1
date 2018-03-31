@@ -1,0 +1,273 @@
+.s-menu{
+	position: relative;
+	z-index: 5;
+	height: 50px;
+	@include res(xl){
+		height: 48px;
+	}
+	@include res(l){
+		display: none;
+	}
+
+	&__fixed{
+		position: relative;
+		background: #FFF;
+
+		&--fixed{
+			position: fixed;
+			top: 50px;
+			left: 0;
+			right: 0;
+			z-index: 99;
+			border-bottom: 1px solid $gray-border;
+			@include res(xl){
+				top: 40px;
+			}
+		}
+	}
+}
+
+.top-menu{
+
+	ul{
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		max-width: 1030px;
+		margin-left: auto;
+		margin-right: auto;
+		@include res(xl){
+			max-width: 830px;
+		}
+
+		li{
+			display: inline-block;
+			flex: 1;
+
+			a{
+				position: relative;
+				display: block;
+				font-size: 18px;
+				line-height: 1;
+				white-space: nowrap;
+				text-align: center;
+				padding: 16px;
+				transition: all 0.3s ease;
+				transform: translate3d(0,0,0);
+				@include res(xl){
+					font-size: 16px;
+				}
+				
+				&:hover{
+					color: #FFF;
+
+					&:before{
+						transform: none;
+					}
+				}
+
+				&:before{
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 100%;
+					z-index: -1;
+					background: $black;
+					transform: scale3d(1,0,1);
+					transform-origin: center bottom;
+					transition: all 0.3s ease;
+				}
+			}
+
+			&.active a{
+				color: #FFF;
+
+				&:before{
+					transform: none;
+				}
+			}
+		}
+	}
+
+	.menu-red{
+		a{
+			color: $red;
+
+			&:hover{
+				color: #FFF;
+			}
+
+			&:before{
+				background: $red;
+			}
+		}
+
+		&.active a{
+			color: #FFF;
+		}
+	}
+}
+
+
+.top-menu-panel{
+	position: absolute;
+	background: #FFF;
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	border-bottom: 1px solid $gray-border;
+	border-top: 2px solid $black;
+	overflow: hidden;
+	padding: 20px 0 50px 0;
+	opacity: 0;
+	visibility: hidden;
+	@include res(xl){
+		padding: 20px 0 40px 0;
+	}
+	@include res(l){
+		padding-bottom: 20px;
+	}
+
+	&.active{
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+
+.top-menu-sub{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 20px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translate3d(0,-60px,0);
+	transition: transform 0.6s ease,opacity 0.2s ease,visibility 0.2s ease;
+
+	&.active{
+		position: relative;
+		top: 0;
+		opacity: 1;
+		visibility: visible;
+		transform: translate3d(0,0px,0);
+
+		.top-menu-sub__img{
+			opacity: 1;
+			transform: none;
+		}
+	}
+
+	&__img{
+		padding-left: 60px;
+		padding-right: 20px;
+		transform: translate3d(0,-60px,0);
+		transition: all 0.5s ease 0.2s;
+		opacity: 0;
+		@include res(xl){
+			padding-left: 50px;
+		}
+		@include res(l){
+			padding-right: 0;
+			padding-left: 20px;
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+
+	&__title{
+		text-align: center;
+		padding-top: 10px;
+		margin-bottom: 1.3em;
+		@include res(xl){
+			margin-bottom: 1em;
+		}
+	}
+
+	&__list{
+		list-style: none;
+		column-count: 2;
+		column-fill: auto;
+		column-gap: 40px;
+		height: 290px;
+		@include res(xl){
+			height: 230px;
+		}
+		@include res(l){
+			column-gap: 20px;
+			height: auto;
+		}
+
+		li{
+			margin-bottom: 14px;
+			line-height: 1.3;
+
+			a{
+				@extend %link-hover-color;
+			}
+		}
+	}
+}
+
+
+.burger{
+	width: 50px;
+	height: 40px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	cursor: pointer;
+	margin-left: -15px;
+	@include res(l){
+		display: flex;
+	}
+
+	figure{
+		width: 25px;
+		height: 2px;
+		background: #FFF;
+		position: relative;
+		transition: transform 0.4s ease,background 0.2s ease 0.1s;
+
+		&:before,&:after{
+			content: '';
+			width: 25px;
+			height: 2px;
+			background: #FFF;
+			position: absolute;
+			transition: transform 0.4s ease;
+		}
+
+		&:before{
+			transform: rotate(0) translate3d(0,-6px,0);
+		}
+
+		&:after{
+			transform: rotate(0) translate3d(0,6px,0);
+		}
+	}
+
+	&.active{
+		background: $red;
+
+		figure{
+			background: $red;
+			transform: rotate(-180deg);
+			transition: transform 0.4s ease,background 0.1s ease;
+			&:before{
+
+				transform: rotate(-45deg) translate3d(0,0,0) scaleX(0.7);
+			}
+			&:after{
+
+				transform: rotate(45deg) translate3d(0,0,0) scaleX(0.7);
+			}
+		}
+	}
+}

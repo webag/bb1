@@ -1,0 +1,146 @@
+.s-mob-panel{
+	position: fixed;
+	z-index: 99;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 360px;
+	max-width: 100%;
+	padding: 60px 0 40px 0;
+	overflow: auto;
+	transform: translate3d(-360px,0,0);
+	transition: transform 0.3s ease;
+	pointer-events: none;
+	background: $black;
+	color: #FFF;
+
+	&.active{
+		pointer-events: all;
+		transform: none;
+	}
+
+	.cities-chooser{
+		display: flex;
+		height: auto;
+		margin-bottom: 5px;
+		padding-bottom: 15px;
+		padding-left: 15px;
+		border-bottom: 1px dashed $gray-interface;
+		margin-right: 0;
+	}
+}
+
+
+
+//mob-menu
+.mob-menu{
+	list-style: none;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed $gray-interface;
+	margin-bottom: 15px;
+
+	&>li{
+		display: block;
+		position: relative;
+
+		&>a{
+			display: block;
+			font-size: 16px;
+			line-height: 1;
+			padding: 12px 15px;
+
+			&.active{
+				color: $gray-text;
+				//font-weight: bold;
+			}
+
+			&.menu-red{
+				color: $red;
+			}
+		}
+
+		i{
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: 40px;
+			width: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+
+			&:before{
+				font-size: 12px;
+				display: block;
+				transition: transform 0.3s ease;
+				transform: rotate(90deg);
+			}
+
+			&.active{
+				background: #FFF;
+				color: $black;
+
+				&:before{
+					transform: rotate(-90deg);
+				}
+			}
+		}
+	}
+}
+
+.mob-menu-sub{
+	display: none;
+	list-style: none;
+	background: #2b2b2b;
+	padding: 8px 0;
+
+	li{
+		display: block;
+
+		a{
+			display: block;
+			padding: 8px 15px 8px 30px;
+			font-size: 14px;
+
+			&.active{
+				color: $red;
+			}
+		}
+	}
+}
+//mob-menu
+
+
+//mob-menu-static
+.mob-menu-static{
+	padding: 0 15px;
+	margin-bottom: 20px;
+
+	&__title{
+		text-transform: uppercase;
+		font-size: 18px;
+		margin-bottom: 5px;
+	}
+
+	ul{
+		list-style: none;
+
+		li{
+			display: inline-block;
+			vertical-align: top;
+			margin-right: 10px;
+			margin-bottom: 6px;
+
+			a{
+				display: block;
+				font-size: 14px;
+
+				&.active{
+					color: $gray-text;
+				}
+			}
+		}
+	}
+}
+//mob-menu-static
