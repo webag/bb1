@@ -368,6 +368,46 @@ Top basket END
 
 
 /***********************
+ Top user BEGIN
+ ***********************/
+function openLogin() {
+	var topLogin = $('.s-login');
+	var btnLogin = $('.top-btn--user');
+	btnLogin.addClass('active');
+	topLogin.addClass('opened');
+}
+
+function closeLogin() {
+	var topLogin = $('.s-login');
+	var btnLogin = $('.top-btn--user');
+	btnLogin.removeClass('active');
+	topLogin.removeClass('opened');
+}
+
+$(function($){
+	$('.top-btn--user').on('click',function () {
+		var topLogin = $('.s-login');
+		if (topLogin.hasClass('opened')){
+			closeLogin();
+		} else {
+			openLogin();
+		}
+	});
+
+	$(document).on('mouseup touchstart',function (e){
+		var topBasket = $(".s-login,.top-btn--user");
+		if (!topBasket.is(e.target) && topBasket.has(e.target).length === 0) {
+			closeLogin();
+		}
+	});
+});
+/***********************
+Top user END
+ ***********************/
+
+
+
+/***********************
 Home slider BEGIN
 ***********************/
 $(function($){

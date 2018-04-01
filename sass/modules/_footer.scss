@@ -50,6 +50,9 @@
 		li{
 			line-height: 1.2;
 			margin-bottom: 0.3em;
+			@include res(s){
+				margin-bottom: 10px;
+			}
 
 			a{
 				@extend %link-hover-color;
@@ -98,6 +101,18 @@
 		&:hover{
 			background: #FFF;
 			color: $black;
+		}
+	}
+
+	&--login{
+		a{
+			width: 30px;
+			height: 30px;
+			background: $black;
+			border: 2px solid $black;
+			color: #FFF;
+			font-size: 18px;
+			margin: 0 7px;
 		}
 	}
 }

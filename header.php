@@ -22,7 +22,7 @@
 	<link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
 	<link rel="shortcut icon" href="favicons/favicon.ico">
 	<meta name="msapplication-config" content="favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
+	<meta name="theme-color" content="#000000">
 	<!-- favocons -->
 
 	<!-- og -->
@@ -32,7 +32,7 @@
 	<meta property="og:image" content="/img/og.jpg">
 	<!-- og -->
 
-	<link href="css/main.css" rel="stylesheet">
+	<link href="css/main.css?v=2" rel="stylesheet">
 </head>
 
 <body>
@@ -43,6 +43,10 @@
 	<div class="cities-chooser">
 		<span class="cities-chooser__title">Ваш город:</span>
 		<a href="#" class="cities-chooser__current fancy-modal" rel="nofollow" data-src="#modal-cities">Санкт-Петербург</a>
+	</div>
+
+	<div class="top-phone">
+		<a href="tel:89220007777">8(922)000-77-77</a>
 	</div>
 
 	<ul class="mob-menu">
@@ -191,18 +195,22 @@
 				<a href="#" class="cities-chooser__current fancy-modal" rel="nofollow" data-src="#modal-cities">Санкт-Петербург</a>
 			</div>
 
+			<div class="top-phone">
+				<a href="tel:89220007777">8(922)000-77-77</a>
+			</div>
+
 			<button class="top-btn fancy-modal" data-src="#modal-cities" title="Выбрать город"><i class="i-pin"></i></button>
 
 			<div class="top-panel-search">
 				<form action="#" class="top-panel-search__form">
-					<input type="search" name="XXX" class="text-input" placeholder="Введите ваш запрос">
+					<input type="search" name="XXX" placeholder="Введите ваш запрос">
 					<button class="top-btn" type="submit" title="Найти"><i class="i-search"></i></button>
 				</form>
 				<button class="top-btn top-btn--search" title="Открыть поиск"><i class="i-search"></i></button>
 			</div>
 
 			<div class="top-panel-user">
-				<button class="top-btn"><i class="i-user"></i></button>
+				<button class="top-btn top-btn--user"><i class="i-user"></i></button>
 			</div>
 
 			<div class="top-panel-basket">
@@ -231,6 +239,59 @@
 
 	</div>
 </header>
+
+
+<section class="s-login">
+	<div class="container">
+		<div class="row">
+
+			<div class="grid-6 grid-12_s">
+				<div class="top-login">
+					<p class="h4">Зарегистрированный пользователь</p>
+					<p class="text-gray">Если вы уже зарегистрированы, войдите в систему</p>
+					<!-- Если ошибка -->
+					<!--<div class="error-block">
+						<p>Не правльный логин</p>
+						<p>Не правльный пароль</p>
+					</div>-->
+					<!-- Если ошибка -->
+					<form action="">
+						<label class="form-group">
+							<span class="form-group__label">E-mail:</span>
+							<input type="email" name="xxx" class="text-input">
+						</label>
+						<label class="form-group">
+							<span class="form-group__label">Пароль:</span>
+							<input type="email" name="xxx" class="text-input">
+							<a href="#" class="forgot-pass-link">Забыли пароль?</a>
+						</label>
+						<div class="social-login">
+							<p class="social-login__title">Войти как пользователь:</p>
+							<div class="social-links social-links--login">
+								<a href="#"><i class="i-vk"></i></a>
+								<a href="#"><i class="i-fb"></i></a>
+							</div>
+						</div>
+						<button type="submit" class="btn">Войти</button>
+					</form>
+				</div>
+			</div>
+
+			<div class="grid-6 grid-12_s">
+				<div class="top-registr">
+					<p class="h4">Новый пользователь</p>
+					<img src="/img/topreg.png" alt="icon" class="top-registr__icon">
+					<div class="top-registr__descr">
+						<p>Зарегистрируйтесь сейчас и воспользуйтесь всеми возможностями сайта.</p>
+						<p>В личном кабинете вы сможете получать персональную рассылку  новостей и акций, а также сохранять и отслеживать свои заказы.</p>
+					</div>
+					<a href="#" class="btn">Зарегистрироваться</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
 
 
 <section class="s-top-logo">

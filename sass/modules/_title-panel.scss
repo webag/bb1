@@ -1,0 +1,17 @@
+.s-title-panel{
+	background: $black;
+	color: #FFF;
+	text-align: center;
+	padding: 27px 0 25px 0;
+	@include res(xl){
+		padding: 19px 0 17px 0;
+		min-height: 60px;
+	}
+
+	&--sep{
+		min-height: 80px;
+		@include res(xl){
+			min-height: 60px;
+		}
+	}
+}

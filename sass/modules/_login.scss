@@ -1,0 +1,131 @@
+.s-login{
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	background: #FFF;
+	max-height: calc(100% - 50px);
+	overflow: auto;
+	//height: 200px;
+	z-index: 99;
+	border-bottom: 1px solid $gray-border;
+	padding: 50px 0;
+	opacity: 0;
+	visibility: hidden;
+	transition: visibility 0.3s ease,opacity 0.3s ease,transform 0.5s ease;
+	transform: translate3d(0,-250px,0);
+	@include res(xl){
+		max-height: calc(100% - 40px);
+		top: 40px;
+		padding: 40px 0;
+	}
+	@include res(s){
+		padding: 20px 0 40px 0;
+	}
+
+	&.opened{
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+		transition: visibility 0.1s ease,opacity 0.1s ease,transform 0.5s ease;
+	}
+}
+
+
+//top-login
+.top-login{
+	text-align: center;
+	max-width: 390px;
+	margin-left: auto;
+	margin-right: auto;
+	@include res(xl){
+		max-width: 345px;
+	}
+	@include res(s){
+		margin-bottom: 40px;
+	}
+
+	.h4{
+		margin-bottom: 5px;
+	}
+
+	.text-gray{
+		margin-bottom: 30px;
+		@include res(xl){
+			margin-bottom: 20px;
+		}
+	}
+
+	.btn{
+		width: 190px;
+		@include res(xl){
+			width: 150px;
+		}
+	}
+}
+
+.forgot-pass-link{
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: $gray-text;
+	@extend %link-hover-color;
+}
+
+.social-login{
+	margin-bottom: 20px;
+
+	&__title{
+		margin-bottom: 3px;
+	}
+}
+//top-login
+
+
+//top-registr
+.top-registr{
+	max-width: 375px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	.h4{
+		margin-bottom: 50px;
+		@include res(xl){
+			margin-bottom: 30px;
+		}
+		@include res(s){
+			margin-bottom: 10px;
+		}
+	}
+
+	&__icon{
+		margin-bottom: 20px;
+		@include res(xl){
+			width: 40px;
+			height: auto;
+			margin-bottom: 17px;
+		}
+		@include res(s){
+			width: 25px;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__descr{
+		color: $gray-text;
+
+		p{
+			margin-bottom: 1em;
+			line-height: 1.3;
+		}
+	}
+
+	.btn{
+		margin-top: 62px;
+		@include res(s){
+			margin-top: 10px;
+		}
+	}
+}
+//top-registr

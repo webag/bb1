@@ -2,10 +2,9 @@
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
-	padding: 10px 30px;
-	font-size: 14px;
+	padding: 8px 30px;
+	font-size: 18px;
 	font-family: $font;
-	text-transform: uppercase;
 	line-height: 1.3;
 	text-decoration: none;
 	text-align: center;
@@ -13,10 +12,11 @@
 	cursor: pointer;
 	transition: all 0.3s ease;
 	user-select: none;
-	background-color: #FFF;
+	background-color: transparent;
 	border: 1px solid $black;
 	@include res(xl){
-		font-size: 12px;
+		font-size: 16px;
+		padding: 4px 24px;
 	}
 
 	&:focus{
@@ -38,4 +38,28 @@ button::-moz-focus-inner {
 
 .btn-center{
 	text-align: center;
+}
+
+
+.btn--mini{
+	font-size: 14px;
+	text-transform: uppercase;
+	padding: 5px 25px;
+	@include res(xl){
+		font-size: 12px;
+		padding: 4px 20px;
+	}
+}
+
+.btn--white{
+	border: 1px solid #FFF;
+	color: #FFF;
+
+	&:focus{
+		border: 1px solid $black;
+	}
+
+	&:hover{
+		border: 1px solid $black;
+	}
 }

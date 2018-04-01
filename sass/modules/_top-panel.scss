@@ -102,7 +102,7 @@
 	@include res(xl){
 		margin-right: 10px;
 	}
-	@include res(l){
+	@include res(m){
 		display: none;
 	}
 
@@ -138,7 +138,7 @@
 		background: #FFF;
 		padding-left: 14px;
 		z-index: 0;
-		transition: visibility 0.3s ease,opacity 0.3s ease,width 0.3s ease;
+		transition: visibility 0.3s ease,opacity 0.3s ease,width 0.3s ease,transform 0.3s ease;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -153,6 +153,7 @@
 			border: 1px solid $gray-border;
 			border-top: none;
 			z-index: 2;
+			transform: translate3d(15px,0,0);
 		}
 
 		input{
@@ -193,6 +194,7 @@
 			@include res(s){
 				position: absolute;
 				margin-right: 0;
+				transform: none;
 			}
 		}
 	}
@@ -243,6 +245,8 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: all 0.3s ease;
+	transform: translate3d(15px,0,0);
+	z-index: -1;
 	@include res(xl){
 		width: 370px;
 	}
@@ -254,6 +258,12 @@
 	&.opened{
 		visibility: visible;
 		opacity: 1;
+		transform: none;
+	}
+
+	.btn{
+		font-size: 14px;
+		text-transform: uppercase;
 	}
 }
 
@@ -295,3 +305,20 @@
 	}
 }
 //top-panel-basket
+
+
+//top-phone
+.top-phone{
+	color: #FFF;
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	@include res(m){
+		display: none;
+	}
+
+	a{
+		@extend %link-hover-color;
+	}
+}
+//top-phone

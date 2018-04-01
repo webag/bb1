@@ -6,8 +6,8 @@ label{cursor: pointer;}
 	font-size: 16px;
 	line-height: 1.3;
 	-webkit-appearance: none;
-	border: 1px solid #666;
-	padding: 5px 10px;
+	border: 1px solid $gray-border;
+	padding: 9px 10px;
 	overflow: visible;
 	transition: all 0.3s ease;
 
@@ -20,13 +20,37 @@ label{cursor: pointer;}
 
 	&:focus{
 		outline: none;
+		border: 1px solid $black;
 	}
 
 	&.error{
 		background: #ffa39e;
+		border: 1px solid $red;
 	}
 }
 
+
+//form-group
+.form-group{
+	display: block;
+	position: relative;
+	text-align: left;
+	margin-bottom: 25px;
+	@include res(xl){
+		margin-bottom: 15px;
+	}
+
+	&__label{
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.text-input{
+		display: block;
+		width: 100%;
+	}
+}
+//form-group
 
 
 //style-checkbox
@@ -91,3 +115,14 @@ label{cursor: pointer;}
 	}
 }
 //style-checkbox
+
+
+//error-block
+.error-block{
+	font-size: 12px;
+	text-align: left;
+	background: #ffc4c4;
+	padding: 5px 15px;
+	margin-bottom: 5px;
+}
+//error-block

@@ -1,0 +1,163 @@
+.product-preview{
+	position: relative;
+	z-index: 1;
+	border: 1px solid transparent;
+	border-bottom: none;
+	padding: 10px 10px 0 10px;
+
+	&:hover{
+		z-index: 2;
+		border: 1px solid $gray-border;
+		border-bottom: none;
+		@include res(l){
+			border: 1px solid transparent;
+		}
+
+		.product-preview__img--second{
+			opacity: 1;
+		}
+
+		.product-preview__footer{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+//product-preview__header
+.product-preview__header{
+	position: relative;
+	margin-bottom: 18px;
+
+	.labels{
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 100%;
+		z-index: 3;
+	}
+}
+
+.product-preview__img{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: auto;
+	z-index: 1;
+
+	&--second{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: auto;
+		z-index: 2;
+		opacity: 0;
+	}
+}
+//product-preview__header
+
+
+//labels
+.labels{
+	text-transform: uppercase;
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 4px;
+		padding: 2px 10px;
+		font-size: 12px;
+		line-height: 1;
+		
+		&--red{
+			background: $red;
+			color: #FFF;
+		}
+		
+		&--green{
+			background: $green;
+			color: #FFF;
+		}
+	}
+}
+//labels
+
+
+//product-preview__main
+.product-preview__main{
+	text-align: center;
+
+	.price{
+		margin: 0 5px 5px 5px;
+	}
+}
+
+.product-preview__title{
+	display: block;
+	font-size: 14px;
+	color: #8d7f7f;
+	@extend %link-hover-color;
+	line-height: 1.4;
+	margin-bottom: 10px;
+	@include res(xl){
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+}
+//product-preview__main
+
+
+//prices
+.prices{
+	font-size: 16px;
+	text-transform: uppercase;
+	@include res(xl){
+		font-size: 14px;
+	}
+}
+
+.price{
+
+	&--old{
+		text-decoration: line-through;
+	}
+	&--new{
+		color: $red;
+	}
+}
+//prices
+
+
+//product-preview__footer
+.product-preview__footer{
+	position: absolute;
+	width: calc(100% + 2px);
+	left: -1px;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	border: 1px solid $gray-border;
+	border-top: none;
+	background: #FFF;
+	opacity: 0;
+	visibility: hidden;
+	@include res(l){
+		position: relative;
+		opacity: 1;
+		visibility: visible;
+		border: none;
+	}
+
+	.color-chooser--mini .color-item{
+		margin: 0 5px 5px 5px;
+		@include res(xl){
+			margin: 0 3px 5px 3px;
+		}
+	}
+
+	.color-chooser+.btn{
+		margin-top: 15px;
+	}
+}
+//product-preview__footer

@@ -4,4 +4,9 @@
 	&:hover{
 		color: $red;
 	}
+
+	&:focus{
+		outline: none;
+		color: $red;
+	}
 }
