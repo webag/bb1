@@ -203,7 +203,7 @@
 
 			<div class="top-panel-search">
 				<form action="#" class="top-panel-search__form">
-					<input type="search" name="XXX" placeholder="Введите ваш запрос">
+					<input type="search" name="XXX" placeholder="Введите ваш запрос" class="js-search-input">
 					<button class="top-btn" type="submit" title="Найти"><i class="i-search"></i></button>
 				</form>
 				<button class="top-btn top-btn--search" title="Открыть поиск"><i class="i-search"></i></button>

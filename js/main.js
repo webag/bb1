@@ -185,7 +185,7 @@ Top search interactions BEGIN
 ***********************/
 function openSearch() {
 	var searchForm = $('.top-panel-search__form');
-	var input = searchForm.find('.text-input');
+	var input = searchForm.find('.js-search-input');
 	var btnSearch = $('.top-btn--search');
 	btnSearch.addClass('active');
 	searchForm.addClass('opened');
