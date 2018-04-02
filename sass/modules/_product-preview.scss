@@ -142,11 +142,18 @@
 	background: #FFF;
 	opacity: 0;
 	visibility: hidden;
+	min-height: 106px;
+	@include res(xl){
+		min-height: 101px;
+	}
 	@include res(l){
 		position: relative;
 		opacity: 1;
 		visibility: visible;
-		border: none;
+		border: 1px solid transparent;
+	}
+	@include res(s){
+		min-height: initial;
 	}
 
 	.color-chooser--mini .color-item{
