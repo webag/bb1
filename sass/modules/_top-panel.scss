@@ -69,6 +69,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		@include res(xl){
 			font-size: 18px;
 			height: 40px;
@@ -87,6 +88,12 @@
 			background: #FFF;
 			color: $black;
 		}
+
+		i{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 }
 
@@ -94,7 +101,6 @@
 //cities-chooser
 .cities-chooser{
 	color: #FFF;
-	height: 100%;
 	display: flex;
 	align-items: center;
 	line-height: 1;
@@ -107,10 +113,12 @@
 	}
 
 	&__title{
+		display: block;
 		margin-right: 7px;
 	}
 
 	&__current{
+		display: block;
 		color: #b4b4b4;
 		border-bottom: 1px solid transparentize(#b4b4b4,0.3);
 		transition: all 0.3s ease;
@@ -133,17 +141,14 @@
 	&__form{
 		width: 40px;
 		overflow: hidden;
-		display: flex;
+		display: none;
 		align-items: center;
 		background: #FFF;
 		padding-left: 14px;
 		z-index: 0;
-		transition: visibility 0.3s ease,opacity 0.3s ease,width 0.3s ease,transform 0.3s ease;
 		position: absolute;
 		top: 0;
 		right: 0;
-		visibility: hidden;
-		opacity: 0;
 		height: 100%;
 		@include res(s){
 			width: 210px;
@@ -154,6 +159,10 @@
 			border-top: none;
 			z-index: 2;
 			transform: translate3d(15px,0,0);
+			transition: all 0.3s ease;
+			display: flex;
+			opacity: 0;
+			visibility: hidden;
 		}
 
 		input{
@@ -163,8 +172,12 @@
 			width: 100%;
 			font-size: 13px;
 			flex-shrink: 1;
+			border-radius: 0;
 			@include res(xl){
 				font-size: 12px;
+			}
+			@include res(l){
+				-webkit-appearance: none;
 			}
 
 			&:focus{
@@ -184,8 +197,7 @@
 		&.opened{
 			width: 260px;
 			position: relative;
-			visibility: visible;
-			opacity: 1;
+			display: flex;
 			margin-right: -40px;
 			z-index: 2;
 			@include res(xl){
@@ -195,6 +207,8 @@
 				position: absolute;
 				margin-right: 0;
 				transform: none;
+				visibility: visible;
+				opacity: 1;
 			}
 		}
 	}
