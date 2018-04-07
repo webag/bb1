@@ -97,7 +97,17 @@ function init_fancy() {
 		backFocus: false,
 		touch: false
 	});
-	$('.fancy-map').fancybox({
+	$().fancybox({
+		selector: '.fancy-gal',
+		backFocus: false,
+		buttons: ['close'],
+		thumbs: {
+			autoStart: true,
+			axis: "x"
+		}
+	});
+	$().fancybox({
+		selector: '.fancy-map',
 		toolbar: false,
 		smallBtn: true,
 		backFocus: false
@@ -105,38 +115,11 @@ function init_fancy() {
 }
 
 function init_fancy__video() {
-	$('.fancy-video').fancybox({
+	$().fancybox({
+		selector: '.fancy-video',
 		toolbar: false,
 		smallBtn: true,
-		backFocus: false,
-		animationEffect: "zoom-in-out",
-		animationDuration: 300,
-		transitionEffect: "slide",
-		youtube: {
-			controls: 1,
-			showinfo: 0,
-			autoplay: 1
-		},
-		onUpdate: function (instance, current) {
-			var width,
-				height,
-				ratio = 16 / 9,
-				video = current.$content;
-			if (video) {
-				video.hide();
-				width = current.$slide.width() - 30;
-				height = current.$slide.height() - 100;
-				if (height * ratio > width) {
-					height = width / ratio;
-				} else {
-					width = height * ratio;
-				}
-				video.css({
-					width: width,
-					height: height
-				}).show();
-			}
-		}
+		backFocus: false
 	});
 }
 
@@ -486,4 +469,85 @@ $(function($){
 });
 /***********************
 Catalog END
+***********************/
+
+
+/***********************
+Catalog-detail BEGIN
+***********************/
+$(function($){
+	$('.product-slider-small').slick({
+		arrows: true,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		infinite: false,
+		asNavFor: '.product-slider-big',
+		focusOnSelect: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="i-up"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="i-down"></i></button>'
+	});
+
+	$('.product-slider-big').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		asNavFor: '.product-slider-small'
+	});
+
+	var relatedNavBtns = $('.related-nav button');
+	var relatedTabs = $('.related-tab');
+
+	function selectRelatedTab(index) {
+		relatedNavBtns.removeClass('active');
+		relatedNavBtns.eq(index).addClass('active');
+		relatedTabs.removeClass('active');
+		relatedTabs.eq(index).addClass('active');
+	}
+
+	relatedNavBtns.on('click',function () {
+		var index = $(this).index();
+		selectRelatedTab(index);
+		$('.related-slider').slick('setPosition');
+	});
+
+	selectRelatedTab(0);
+
+	$('.related-slider').slick({
+		arrows: true,
+		dots: false,
+		infinite: false,
+		slidesToShow: 4,
+		slidesToScroll: 4,
+		prevArrow: '<button type="button" class="slick-prev"><i class="i-left"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="i-right"></i></button>',
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3
+				}
+			},
+			{
+				breakpoint: 680,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+});
+/***********************
+Catalog-detail END
 ***********************/

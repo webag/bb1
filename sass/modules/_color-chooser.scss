@@ -18,6 +18,11 @@
 	border-radius: 50%;
 	background-size: contain;
 	margin: 0 15px 15px 0;
+	@include res(xl){
+		width: 30px;
+		height: 30px;
+		margin: 0 10px 10px 0;
+	}
 
 	input{
 		position: absolute;

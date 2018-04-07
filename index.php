@@ -99,7 +99,7 @@
 			<div class="grid-4 grid-12_s">
 				<div class="product-preview">
 					<header class="product-preview__header">
-						<a href="#">
+						<a href="/catalog-detail.php">
 							<img src="/img/products/1.jpg" alt="1" class="product-preview__img">
 							<img src="/img/products/1_1.jpg" alt="1" class="product-preview__img--second">
 						</a>
@@ -109,7 +109,7 @@
 						</div>
 					</header>
 					<main class="product-preview__main">
-						<a href="#" class="product-preview__title">Клатч BB1 ORIGINAL</a>
+						<a href="/catalog-detail.php" class="product-preview__title">Клатч BB1 ORIGINAL</a>
 						<div class="prices">
 							<span class="price price--old">15 000 руб</span>
 							<span class="price price--new">7 990 Руб</span>
@@ -153,7 +153,7 @@
 			<div class="grid-4 grid-12_s">
 				<div class="product-preview">
 					<header class="product-preview__header">
-						<a href="#">
+						<a href="/catalog-detail.php">
 							<img src="/img/products/2.jpg" alt="1" class="product-preview__img">
 							<img src="/img/products/2_2.jpg" alt="1" class="product-preview__img--second">
 						</a>
@@ -162,7 +162,7 @@
 						</div>
 					</header>
 					<main class="product-preview__main">
-						<a href="#" class="product-preview__title">Сумка-шопер BB1 ORIGINAL</a>
+						<a href="/catalog-detail.php" class="product-preview__title">Сумка-шопер BB1 ORIGINAL</a>
 						<div class="prices">
 							<span class="price price--old">162 000 руб</span>
 							<span class="price price--new">27 990 Руб</span>
@@ -186,7 +186,7 @@
 			<div class="grid-4 grid-12_s">
 				<div class="product-preview">
 					<header class="product-preview__header">
-						<a href="#">
+						<a href="/catalog-detail.php">
 							<img src="/img/products/3.jpg" alt="1" class="product-preview__img">
 							<img src="/img/products/3_3.jpg" alt="1" class="product-preview__img--second">
 						</a>
@@ -195,7 +195,7 @@
 						</div>
 					</header>
 					<main class="product-preview__main">
-						<a href="#" class="product-preview__title">Сумка BB1 MILANO</a>
+						<a href="/catalog-detail.php" class="product-preview__title">Сумка BB1 MILANO</a>
 						<div class="prices">
 							<span class="price">15 000 руб</span>
 						</div>

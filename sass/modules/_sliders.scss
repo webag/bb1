@@ -1,0 +1,60 @@
+.vertical-arrows{
+	.slick-arrow{
+		width: 100%;
+		background: none;
+		border: none;
+		font-size: 20px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		height: 30px;
+		@include res(xl){
+			font-size: 15px;
+		}
+
+		&:hover{
+			color: $gray-interface;
+		}
+
+		&:focus{
+			outline: none;
+		}
+	}
+}
+
+
+.horizont-arrows{
+	.slick-arrow{
+		position: absolute;
+		top: 0;
+		width: 20px;
+		height: 100%;
+		background: none;
+		border: none;
+		font-size: 20px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		@include res(xl){
+			font-size: 15px;
+		}
+
+		&:hover{
+			color: $gray-interface;
+		}
+
+		&:focus{
+			outline: none;
+		}
+
+		&.slick-prev{
+			left: 0;
+		}
+		&.slick-next{
+			right: 0;
+		}
+
+		&.slick-disabled{
+			opacity: 0.3;
+			pointer-events: none;
+		}
+	}
+}
