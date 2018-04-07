@@ -59,8 +59,8 @@ label{cursor: pointer;}
 	display: block;
 	position: relative;
 	cursor: pointer;
-	margin-bottom: 15px;
-	font-size: 12px;
+	font-size: 14px;
+	line-height: 1.2;
 
 	input{
 		opacity: 0;
@@ -84,27 +84,29 @@ label{cursor: pointer;}
 	span{
 		display: block;
 		position: relative;
-		padding-left: 30px;
+		padding-left: 20px;
 
 		&:before{
 			content: '';
-			width: 20px;
-			height: 20px;
-			border: 2px solid #353434;
+			width: 12px;
+			height: 12px;
+			border: 1px solid $gray-interface;
+			border-radius: 6px;
 			position: absolute;
 			left: 0;
-			top: 0;
+			top: 2px;
 			transition: all 0.3s ease;
 		}
 
 		&:after{
 			content: '';
-			width: 20px;
-			height: 20px;
-			background: #353434;
+			width: 8px;
+			height: 8px;
+			background: $gray-interface;
+			border-radius: 4px;
 			position: absolute;
-			left: 0;
-			top: 0;
+			left: 2px;
+			top: 4px;
 			z-index: 2;
 			opacity: 0;
 			transition: opacity 0.3s ease;
@@ -113,6 +115,11 @@ label{cursor: pointer;}
 		a{
 			color: #353434;
 		}
+	}
+
+	&--disabled{
+		pointer-events: none;
+		opacity: 0.4;
 	}
 }
 //style-checkbox

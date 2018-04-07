@@ -1,0 +1,296 @@
+//s-sort
+.s-sort{
+
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		@include res(xs){
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.mob-open-filter{
+		display: none;
+		@include res(l){
+			display: inline-block;
+		}
+		@include res(xs){
+			order: 2;
+			margin-top: 5px;
+		}
+	}
+
+	.filter-block-close{
+		@include cross();
+		position: fixed;
+		left: 244px !important;
+		top: 44px !important;
+		right: initial !important;
+		z-index: 7;
+		transform: translate3d(0,-50px,0);
+		visibility: hidden;
+		opacity: 0;
+		-webkit-tap-highlight-color: transparent;
+		background: $gray-border;
+		
+		&:hover{
+			background: $gray-border;
+		}
+		
+		&:after,&:before{
+			background: #FFF;
+		}
+
+		&.visible{
+			transform: none;
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+}
+
+.sort-block{
+	display: flex;
+	align-items: center;
+	position: absolute;
+	right: 15px;
+	top: -45px;
+	background: #FFF;
+	padding-left: 15px;
+	@include res(xl){
+		top: -40px;
+	}
+	@include res(l){
+		position: relative;
+		top: initial;
+		right: initial;
+		padding-left: 0;
+		margin-bottom: 10px;
+	}
+
+	&__title{
+		color: $gray-text;
+		margin-right: 15px;
+	}
+}
+//s-sort
+
+
+.s-catalog{
+	padding-bottom: 70px;
+	@include res(xl){
+		padding-bottom: 50px;
+	}
+}
+
+
+//catalog-aside
+.catalog-aside{
+	order: 1;
+	@include res(l){
+		order: 2;
+		display: flex;
+		align-items: flex-start;
+		margin-top: 40px;
+	}
+
+	&__banner{
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+		@include res(l){
+			width: calc(100% / 3);
+			flex-shrink: 0;
+			height: auto;
+		}
+	}
+
+	&__decr{
+		@extend .text-small;
+		color: $gray-text;
+		text-align: justify;
+		@include res(l){
+			width: calc(100% / 3);
+			flex-shrink: 0;
+			height: auto;
+			padding-left: 30px;
+			padding-top: 20px;
+		}
+		@include res(s){
+			width: calc(100% / 3 * 2);
+		}
+		@include res(xs){
+			padding-top: 0;
+			padding-left: 15px;
+		}
+	}
+}
+//catalog-aside
+
+
+//catalog-main
+.catalog-main{
+	order: 2;
+	@include res(l){
+		order: 1;
+	}
+}
+//catalog-main
+
+
+//filter-block
+.filter-block{
+	background: #FFF;
+	border-radius: 15px;
+	margin-bottom: 30px;
+	@include res(l){
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		z-index: 5;
+		border-radius: 0;
+		overflow: auto;
+		width: 240px;
+		padding: 60px 0 30px 0;
+		-webkit-overflow-scrolling: touch;
+		box-shadow: 5px 0 20px 0 rgba(0,0,0,0.15);
+		transform: translate3d(-250px,0,0);
+		transition: transform 0.3s ease;
+		pointer-events: none;
+	}
+
+	&.active{
+		transform: none;
+		pointer-events: all;
+	}
+}
+
+.filter{
+	position: relative;
+	margin-bottom: 15px;
+	color: $gray-text;
+
+	&__title{
+		display: block;
+		position: relative;
+		padding: 7px 100px 7px 10px;
+		cursor: pointer;
+		transition: color 0.3s ease;
+		line-height: 1.1;
+		user-select: none;
+		border-bottom: 1px solid $gray-border;
+
+		&:hover{
+			color: $black;
+		}
+
+		&:before,&:after{
+			content: '';
+			display: block;
+			position: absolute;
+			top: 13px;
+			right: 10px;
+			width: 12px;
+			height: 2px;
+			border-top: 0;
+			border-right: 0;
+			background: currentColor;
+			transition: transform 0.3s ease;
+		}
+
+		&:after{
+			transform: rotate(90deg);
+		}
+	}
+
+	&__clear{
+		font-size: 14px;
+		color: $gray-text;
+		transition: all 0.3s ease;
+		position: absolute;
+		top: 4px;
+		right: 40px;
+		cursor: pointer;
+		user-select: none;
+		@include res(xl){
+			top: 6px;
+			font-size: 12px;
+		}
+
+		&:hover{
+			color: $black;
+		}
+	}
+
+	&__values{
+		padding: 15px 10px 5px 10px;
+		display: none;
+	}
+
+	.style-checkbox{
+		margin-bottom: 5px;
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	&.opened{
+		.filter__title{
+			&:after{
+				display: none;
+			}
+		}
+		.filter__values{
+			display: block;
+		}
+	}
+}
+
+
+.filter-mod{
+	position: absolute;
+	display: block;
+	z-index: 4;
+	left: 100%;
+	top: 30px;
+	background: $gray-bg;
+	padding: 6px;
+	font-size: 12px;
+	width: 120px;
+	color: $black;
+	transition: background-color 0.3s ease;
+	@include res(l){
+		position: relative;
+		left: 0;
+		top: 0;
+		margin-top: 6px;
+		width: 100%;
+		padding: 6px 10px;
+	}
+
+	&:hover{
+		background: darken($gray-bg,5%);
+		&:before{
+			background: darken($gray-bg,5%);
+		}
+	}
+
+	&:before{
+		content: '';
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		background: $gray-bg;
+		left: -6px;
+		top: 10px;
+		transform: rotate(45deg);
+		z-index: -1;
+		transition: background-color 0.3s ease;
+	}
+}
+//filter-block

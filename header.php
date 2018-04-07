@@ -52,94 +52,94 @@
 	<ul class="mob-menu">
 		<li><a href="#" class="menu-red">Новинки</a></li>
 		<li>
-			<a href="#">Ремни</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php">Ремни</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">Ремни JEANS COLLECTION</a></li>
-				<li><a href="#">Ремни CLASSIC COLLECTION</a></li>
-				<li><a href="#" class="active">Ремни COLOR COLLECTION</a></li>
-				<li><a href="#">Ремни BB-CLIP COLLECTION</a></li>
-				<li><a href="#">Ремни AUTO COLLECTION</a></li>
-				<li><a href="#">Дизайнерские ремни</a></li>
-				<li><a href="#">Ремни-автоматы</a></li>
-				<li><a href="#">Брендовые ремни BB1</a></li>
-				<li><a href="#">Узкие ремни (10/15/20 мм)</a></li>
-				<li><a href="#">Средние ремни (25/30 мм)</a></li>
-				<li><a href="#">Брючные ремни (35 мм)</a></li>
-				<li><a href="#">Джинсовые ремни (45 мм)</a></li>
-				<li><a href="#">Широкие ремни (50/60 мм)</a></li>
+				<li><a href="/catalog.php">Ремни JEANS COLLECTION</a></li>
+				<li><a href="/catalog.php">Ремни CLASSIC COLLECTION</a></li>
+				<li><a href="/catalog.php" class="active">Ремни COLOR COLLECTION</a></li>
+				<li><a href="/catalog.php">Ремни BB-CLIP COLLECTION</a></li>
+				<li><a href="/catalog.php">Ремни AUTO COLLECTION</a></li>
+				<li><a href="/catalog.php">Дизайнерские ремни</a></li>
+				<li><a href="/catalog.php">Ремни-автоматы</a></li>
+				<li><a href="/catalog.php">Брендовые ремни BB1</a></li>
+				<li><a href="/catalog.php">Узкие ремни (10/15/20 мм)</a></li>
+				<li><a href="/catalog.php">Средние ремни (25/30 мм)</a></li>
+				<li><a href="/catalog.php">Брючные ремни (35 мм)</a></li>
+				<li><a href="/catalog.php">Джинсовые ремни (45 мм)</a></li>
+				<li><a href="/catalog.php">Широкие ремни (50/60 мм)</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">Пряжки</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php">Пряжки</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">Классические пряжки</a></li>
-				<li><a href="#">Пряжки AUTOMATIC BELT</a></li>
-				<li><a href="#">Пряжки LEATHER INSET</a></li>
-				<li><a href="#">Пряжки ENGRAVED</a></li>
-				<li><a href="#">Пряжки FUSED GLASS</a></li>
-				<li><a href="#">3D - пряжки</a></li>
-				<li><a href="#">Ременные полосы</a></li>
+				<li><a href="/catalog.php">Классические пряжки</a></li>
+				<li><a href="/catalog.php">Пряжки AUTOMATIC BELT</a></li>
+				<li><a href="/catalog.php">Пряжки LEATHER INSET</a></li>
+				<li><a href="/catalog.php">Пряжки ENGRAVED</a></li>
+				<li><a href="/catalog.php">Пряжки FUSED GLASS</a></li>
+				<li><a href="/catalog.php">3D - пряжки</a></li>
+				<li><a href="/catalog.php">Ременные полосы</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">Сумки</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php">Сумки</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">Женские сумки</a></li>
-				<li><a href="#">Мужские сумки</a></li>
-				<li><a href="#">Мини-сумки и клатчи</a></li>
-				<li><a href="#">Рюкзаки</a></li>
-				<li><a href="#">Сумки PRINT COLOR</a></li>
-				<li><a href="#">Сумки BB1 MILANO</a></li>
-				<li><a href="#">Cумки BB-CLIP COLLECTION</a></li>
-				<li><a href="#">Сумки RUSSIAN SOUVENIR COLLECTION</a></li>
+				<li><a href="/catalog.php">Женские сумки</a></li>
+				<li><a href="/catalog.php">Мужские сумки</a></li>
+				<li><a href="/catalog.php">Мини-сумки и клатчи</a></li>
+				<li><a href="/catalog.php">Рюкзаки</a></li>
+				<li><a href="/catalog.php">Сумки PRINT COLOR</a></li>
+				<li><a href="/catalog.php">Сумки BB1 MILANO</a></li>
+				<li><a href="/catalog.php">Cумки BB-CLIP COLLECTION</a></li>
+				<li><a href="/catalog.php">Сумки RUSSIAN SOUVENIR COLLECTION</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#">Аксессуары</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php">Аксессуары</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">Обложки для документов</a></li>
-				<li><a href="#">Визитницы</a></li>
-				<li><a href="#">Косметички</a></li>
-				<li><a href="#">Блокноты и пеналы</a></li>
-				<li><a href="#">Портмоне мужские</a></li>
-				<li><a href="#">Портмоне женские</a></li>
-				<li><a href="#">Монетницы</a></li>
-				<li><a href="#">Подстаканники из кожи</a></li>
-				<li><a href="#">Футляры для наушников и зарядных устройств</a></li>
-				<li><a href="#">Футляры для ключей и брелки</a></li>
-				<li><a href="#">Футляры для очков</a></li>
+				<li><a href="/catalog.php">Обложки для документов</a></li>
+				<li><a href="/catalog.php">Визитницы</a></li>
+				<li><a href="/catalog.php">Косметички</a></li>
+				<li><a href="/catalog.php">Блокноты и пеналы</a></li>
+				<li><a href="/catalog.php">Портмоне мужские</a></li>
+				<li><a href="/catalog.php">Портмоне женские</a></li>
+				<li><a href="/catalog.php">Монетницы</a></li>
+				<li><a href="/catalog.php">Подстаканники из кожи</a></li>
+				<li><a href="/catalog.php">Футляры для наушников и зарядных устройств</a></li>
+				<li><a href="/catalog.php">Футляры для ключей и брелки</a></li>
+				<li><a href="/catalog.php">Футляры для очков</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#" class="active">Print color</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php" class="active">Print color</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">Сумки</a></li>
-				<li><a href="#">Ремни</a></li>
-				<li><a href="#">Обложки для паспорта</a></li>
-				<li><a href="#">Визитницы</a></li>
-				<li><a href="#">Блокноты</a></li>
-				<li><a href="#">Обложки для студенческого</a></li>
-				<li><a href="#">Обложки для автодокументов</a></li>
-				<li><a href="#">Косметички</a></li>
-				<li><a href="#">Браслеты</a></li>
-				<li><a href="#">Наборы</a></li>
-				<li><a href="#">Сумочки детские</a></li>
+				<li><a href="/catalog.php">Сумки</a></li>
+				<li><a href="/catalog.php">Ремни</a></li>
+				<li><a href="/catalog.php">Обложки для паспорта</a></li>
+				<li><a href="/catalog.php">Визитницы</a></li>
+				<li><a href="/catalog.php">Блокноты</a></li>
+				<li><a href="/catalog.php">Обложки для студенческого</a></li>
+				<li><a href="/catalog.php">Обложки для автодокументов</a></li>
+				<li><a href="/catalog.php">Косметички</a></li>
+				<li><a href="/catalog.php">Браслеты</a></li>
+				<li><a href="/catalog.php">Наборы</a></li>
+				<li><a href="/catalog.php">Сумочки детские</a></li>
 			</ul>
 		</li>
 		<li>
-			<a href="#" class="menu-red">Sale</a>
-			<i class="i-right-ar"></i>
+			<a href="/catalog.php" class="menu-red">Sale</a>
+			<figure></figure>
 			<ul class="mob-menu-sub">
-				<li><a href="#">3D пряжки</a></li>
-				<li><a href="#">Пряжки ENGRAVED</a></li>
-				<li><a href="#">Браслеты</a></li>
-				<li><a href="#">Украшения для браслетов</a></li>
-				<li><a href="#">Кожаные браслеты BB1</a></li>
+				<li><a href="/catalog.php">3D пряжки</a></li>
+				<li><a href="/catalog.php">Пряжки ENGRAVED</a></li>
+				<li><a href="/catalog.php">Браслеты</a></li>
+				<li><a href="/catalog.php">Украшения для браслетов</a></li>
+				<li><a href="/catalog.php">Кожаные браслеты BB1</a></li>
 			</ul>
 		</li>
 	</ul>
@@ -310,13 +310,13 @@
 		<div class="container">
 			<nav class="top-menu">
 				<ul>
-					<li class="menu-red"><a href="#">Новинки</a></li>
-					<li data-sub="sub_1"><a href="#">Ремни</a></li>
-					<li data-sub="sub_2"><a href="#">Пряжки</a></li>
-					<li data-sub="sub_3"><a href="#">Сумки</a></li>
-					<li data-sub="sub_4"><a href="#">Аксессуары</a></li>
-					<li data-sub="sub_5"><a href="#">Print color</a></li>
-					<li class="menu-red" data-sub="sub_6"><a href="#">Sale</a></li>
+					<li class="menu-red"><a href="/catalog.php">Новинки</a></li>
+					<li data-sub="sub_1"><a href="/catalog.php">Ремни</a></li>
+					<li data-sub="sub_2"><a href="/catalog.php">Пряжки</a></li>
+					<li data-sub="sub_3"><a href="/catalog.php">Сумки</a></li>
+					<li data-sub="sub_4"><a href="/catalog.php">Аксессуары</a></li>
+					<li data-sub="sub_5"><a href="/catalog.php">Print color</a></li>
+					<li class="menu-red" data-sub="sub_6"><a href="/catalog.php">Sale</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -329,19 +329,19 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">ремни Bb1 BELTS genuine leather</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">Ремни JEANS COLLECTION</a></li>
-								<li><a href="#">Ремни CLASSIC COLLECTION</a></li>
-								<li><a href="#">Ремни COLOR COLLECTION</a></li>
-								<li><a href="#">Ремни BB-CLIP COLLECTION</a></li>
-								<li><a href="#">Ремни AUTO COLLECTION</a></li>
-								<li><a href="#">Дизайнерские ремни</a></li>
-								<li><a href="#">Ремни-автоматы</a></li>
-								<li><a href="#">Брендовые ремни BB1</a></li>
-								<li><a href="#">Узкие ремни (10/15/20 мм)</a></li>
-								<li><a href="#">Средние ремни (25/30 мм)</a></li>
-								<li><a href="#">Брючные ремни (35 мм)</a></li>
-								<li><a href="#">Джинсовые ремни (45 мм)</a></li>
-								<li><a href="#">Широкие ремни (50/60 мм)</a></li>
+								<li><a href="/catalog.php">Ремни JEANS COLLECTION</a></li>
+								<li><a href="/catalog.php">Ремни CLASSIC COLLECTION</a></li>
+								<li><a href="/catalog.php">Ремни COLOR COLLECTION</a></li>
+								<li><a href="/catalog.php">Ремни BB-CLIP COLLECTION</a></li>
+								<li><a href="/catalog.php">Ремни AUTO COLLECTION</a></li>
+								<li><a href="/catalog.php">Дизайнерские ремни</a></li>
+								<li><a href="/catalog.php">Ремни-автоматы</a></li>
+								<li><a href="/catalog.php">Брендовые ремни BB1</a></li>
+								<li><a href="/catalog.php">Узкие ремни (10/15/20 мм)</a></li>
+								<li><a href="/catalog.php">Средние ремни (25/30 мм)</a></li>
+								<li><a href="/catalog.php">Брючные ремни (35 мм)</a></li>
+								<li><a href="/catalog.php">Джинсовые ремни (45 мм)</a></li>
+								<li><a href="/catalog.php">Широкие ремни (50/60 мм)</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -359,13 +359,13 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">Пряжки и ременные полосы BB1</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">Классические пряжки</a></li>
-								<li><a href="#">Пряжки AUTOMATIC BELT</a></li>
-								<li><a href="#">Пряжки LEATHER INSET</a></li>
-								<li><a href="#">Пряжки ENGRAVED</a></li>
-								<li><a href="#">Пряжки FUSED GLASS</a></li>
-								<li><a href="#">3D - пряжки</a></li>
-								<li><a href="#">Ременные полосы</a></li>
+								<li><a href="/catalog.php">Классические пряжки</a></li>
+								<li><a href="/catalog.php">Пряжки AUTOMATIC BELT</a></li>
+								<li><a href="/catalog.php">Пряжки LEATHER INSET</a></li>
+								<li><a href="/catalog.php">Пряжки ENGRAVED</a></li>
+								<li><a href="/catalog.php">Пряжки FUSED GLASS</a></li>
+								<li><a href="/catalog.php">3D - пряжки</a></li>
+								<li><a href="/catalog.php">Ременные полосы</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -383,14 +383,14 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">Cумки BB1 Bags genuine leather</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">Женские сумки</a></li>
-								<li><a href="#">Мужские сумки</a></li>
-								<li><a href="#">Мини-сумки и клатчи</a></li>
-								<li><a href="#">Рюкзаки</a></li>
-								<li><a href="#">Сумки PRINT COLOR</a></li>
-								<li><a href="#">Сумки BB1 MILANO</a></li>
-								<li><a href="#">Cумки BB-CLIP COLLECTION</a></li>
-								<li><a href="#">Сумки RUSSIAN SOUVENIR COLLECTION</a></li>
+								<li><a href="/catalog.php">Женские сумки</a></li>
+								<li><a href="/catalog.php">Мужские сумки</a></li>
+								<li><a href="/catalog.php">Мини-сумки и клатчи</a></li>
+								<li><a href="/catalog.php">Рюкзаки</a></li>
+								<li><a href="/catalog.php">Сумки PRINT COLOR</a></li>
+								<li><a href="/catalog.php">Сумки BB1 MILANO</a></li>
+								<li><a href="/catalog.php">Cумки BB-CLIP COLLECTION</a></li>
+								<li><a href="/catalog.php">Сумки RUSSIAN SOUVENIR COLLECTION</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -408,17 +408,17 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">Аксессуары bb1 leather items</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">Обложки для документов</a></li>
-								<li><a href="#">Визитницы</a></li>
-								<li><a href="#">Косметички</a></li>
-								<li><a href="#">Блокноты и пеналы</a></li>
-								<li><a href="#">Портмоне мужские</a></li>
-								<li><a href="#">Портмоне женские</a></li>
-								<li><a href="#">Монетницы</a></li>
-								<li><a href="#">Подстаканники из кожи</a></li>
-								<li><a href="#">Футляры для наушников и зарядных устройств</a></li>
-								<li><a href="#">Футляры для ключей и брелки</a></li>
-								<li><a href="#">Футляры для очков</a></li>
+								<li><a href="/catalog.php">Обложки для документов</a></li>
+								<li><a href="/catalog.php">Визитницы</a></li>
+								<li><a href="/catalog.php">Косметички</a></li>
+								<li><a href="/catalog.php">Блокноты и пеналы</a></li>
+								<li><a href="/catalog.php">Портмоне мужские</a></li>
+								<li><a href="/catalog.php">Портмоне женские</a></li>
+								<li><a href="/catalog.php">Монетницы</a></li>
+								<li><a href="/catalog.php">Подстаканники из кожи</a></li>
+								<li><a href="/catalog.php">Футляры для наушников и зарядных устройств</a></li>
+								<li><a href="/catalog.php">Футляры для ключей и брелки</a></li>
+								<li><a href="/catalog.php">Футляры для очков</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -436,17 +436,17 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">Коллекция bb1 print color</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">Сумки</a></li>
-								<li><a href="#">Ремни</a></li>
-								<li><a href="#">Обложки для паспорта</a></li>
-								<li><a href="#">Визитницы</a></li>
-								<li><a href="#">Блокноты</a></li>
-								<li><a href="#">Обложки для студенческого</a></li>
-								<li><a href="#">Обложки для автодокументов</a></li>
-								<li><a href="#">Косметички</a></li>
-								<li><a href="#">Браслеты</a></li>
-								<li><a href="#">Наборы</a></li>
-								<li><a href="#">Сумочки детские</a></li>
+								<li><a href="/catalog.php">Сумки</a></li>
+								<li><a href="/catalog.php">Ремни</a></li>
+								<li><a href="/catalog.php">Обложки для паспорта</a></li>
+								<li><a href="/catalog.php">Визитницы</a></li>
+								<li><a href="/catalog.php">Блокноты</a></li>
+								<li><a href="/catalog.php">Обложки для студенческого</a></li>
+								<li><a href="/catalog.php">Обложки для автодокументов</a></li>
+								<li><a href="/catalog.php">Косметички</a></li>
+								<li><a href="/catalog.php">Браслеты</a></li>
+								<li><a href="/catalog.php">Наборы</a></li>
+								<li><a href="/catalog.php">Сумочки детские</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -464,11 +464,11 @@
 						<div class="grid-6 grid-7_l">
 							<div class="top-menu-sub__title h2">Распродажа bb1 season sale</div>
 							<ul class="top-menu-sub__list">
-								<li><a href="#">3D пряжки</a></li>
-								<li><a href="#">Пряжки ENGRAVED</a></li>
-								<li><a href="#">Браслеты</a></li>
-								<li><a href="#">Украшения для браслетов</a></li>
-								<li><a href="#">Кожаные браслеты BB1</a></li>
+								<li><a href="/catalog.php">3D пряжки</a></li>
+								<li><a href="/catalog.php">Пряжки ENGRAVED</a></li>
+								<li><a href="/catalog.php">Браслеты</a></li>
+								<li><a href="/catalog.php">Украшения для браслетов</a></li>
+								<li><a href="/catalog.php">Кожаные браслеты BB1</a></li>
 							</ul>
 						</div>
 						<div class="grid-6 grid-5_l">
@@ -485,3 +485,21 @@
 	</div>
 
 </section>
+
+
+<? if ($_SERVER['REQUEST_URI'] !== "/" && $_SERVER['REQUEST_URI'] !== "/index.php") : ?>
+	<section class="s-title-panel">
+		<div class="container">
+			<h1 class="h1">Сумки bb1 bags genuine leather</h1>
+		</div>
+	</section>
+
+
+	<section class="s-breadcrumbs">
+		<div class="container">
+			<a href="/">BB1</a>
+			<a href="/">Женские сумки</a>
+			<a href="/">Футляры для наушников и зарядных устройств</a>
+		</div>
+	</section>
+<? endif; ?>

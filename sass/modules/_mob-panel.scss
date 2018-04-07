@@ -66,7 +66,7 @@
 			}
 		}
 
-		i{
+		figure{
 			position: absolute;
 			right: 0;
 			top: 0;
@@ -77,19 +77,39 @@
 			justify-content: center;
 			cursor: pointer;
 
+			&:before,&:after{
+				content: '';
+				width: 14px;
+				height: 2px;
+				background: #FFF;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				transition: all 0.3s ease;
+			}
+
 			&:before{
-				font-size: 12px;
-				display: block;
-				transition: transform 0.3s ease;
+				
+			}
+
+			&:after{
 				transform: rotate(90deg);
 			}
 
 			&.active{
 				background: #FFF;
-				color: $black;
 
-				&:before{
-					transform: rotate(-90deg);
+				&:after,&:before{
+					background: $black;
+					transform: rotate(-180deg);
+				}
+
+				&:after{
+					opacity: 0;
+					background: $black;
 				}
 			}
 		}
@@ -151,3 +171,59 @@
 	}
 }
 //mob-menu-static
+
+
+.burger{
+	width: 50px;
+	height: 40px;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	cursor: pointer;
+	margin-left: -15px;
+	@include res(l){
+		display: flex;
+	}
+
+	figure{
+		width: 25px;
+		height: 2px;
+		background: #FFF;
+		position: relative;
+		transition: transform 0.4s ease,background 0.2s ease 0.1s;
+
+		&:before,&:after{
+			content: '';
+			width: 25px;
+			height: 2px;
+			background: #FFF;
+			position: absolute;
+			transition: transform 0.4s ease;
+		}
+
+		&:before{
+			transform: rotate(0) translate3d(0,-6px,0);
+		}
+
+		&:after{
+			transform: rotate(0) translate3d(0,6px,0);
+		}
+	}
+
+	&.active{
+		background: $gray-interface;
+
+		figure{
+			background: transparent;
+			transform: rotate(-180deg);
+			transition: transform 0.4s ease,background 0.1s ease;
+			&:before{
+				transform: rotate(-45deg) translate3d(0,0,0) scaleX(0.7);
+			}
+			&:after{
+				transform: rotate(45deg) translate3d(0,0,0) scaleX(0.7);
+			}
+		}
+	}
+}

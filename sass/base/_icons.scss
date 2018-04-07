@@ -23,6 +23,19 @@ i {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+
+.i-left:before {
+	content: "\e909";
+}
+.i-right:before {
+	content: "\e90a";
+}
+.i-down:before {
+	content: "\e90b";
+}
+.i-up:before {
+	content: "\e90c";
+}
 .i-fb:before {
 	content: "\e906";
 }

@@ -312,7 +312,7 @@ $(function(){
 		}
 	});
 
-	$('.mob-menu .i-right-ar').on('click',function () {
+	$('.mob-menu figure').on('click',function () {
 		var self = $(this);
 		var thisSub = self.next('.mob-menu-sub');
 
@@ -419,4 +419,71 @@ $(function($){
 });
 /***********************
 Home slider END
+***********************/
+
+
+/***********************
+ Nice select BEGIN
+ ***********************/
+$(function($){
+	$('.select-style').niceSelect();
+});
+/***********************
+ Nice select END
+ ***********************/
+
+
+/***********************
+Catalog BEGIN
+***********************/
+$(function($){
+	var btnFilterOpen = $('.mob-open-filter');
+	var filterPanel = $('.filter-block');
+	var filterPanelClose = $('.filter-block-close');
+
+	function closeMobFilter() {
+		filterPanel.removeClass('active');
+		btnFilterOpen.removeClass('active');
+		filterPanelClose.removeClass('visible');
+	}
+	function openMobFilter() {
+		filterPanel.addClass('active');
+		btnFilterOpen.addClass('active');
+		filterPanelClose.addClass('visible');
+	}
+
+	btnFilterOpen.on('click',function () {
+		openMobFilter();
+	});
+
+	filterPanelClose.on('click',function () {
+		closeMobFilter();
+	});
+
+	$(document).on('click touchstart',function (e){
+		var div = $(".mob-open-filter,.filter-block,.filter-block-close");
+		if (!div.is(e.target) && div.has(e.target).length === 0){
+			closeMobFilter();
+		}
+	});
+
+
+	$('.filter__title').on('click',function (e) {
+		e.preventDefault();
+		var thisTitle = $(this);
+		var thisFilter = thisTitle.parents('.filter');
+		var thisValues = thisFilter.find('.filter__values');
+		if (thisFilter.hasClass('opened')){
+			thisValues.slideUp(function () {
+				thisFilter.removeClass('opened');
+			});
+		} else {
+			thisValues.slideDown(function () {
+				thisFilter.addClass('opened');
+			});
+		}
+	});
+});
+/***********************
+Catalog END
 ***********************/

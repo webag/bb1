@@ -4,9 +4,12 @@
 	border: 1px solid transparent;
 	border-bottom: none;
 	padding: 10px 10px 0 10px;
+	@include res(s){
+		padding: 5px 5px 0 5px;
+	}
 
 	&:hover{
-		z-index: 2;
+		z-index: 10;
 		border: 1px solid $gray-border;
 		border-bottom: none;
 		@include res(l){
