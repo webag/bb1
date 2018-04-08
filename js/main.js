@@ -631,7 +631,7 @@ $(function($){
 	$(document).on('click','[data-preview]',function (e) {
 		e.preventDefault();
 		var productId = $(this).data('preview');
-		$.get("/preview-ajax.html", {id: productId}, function(data) {
+		$.get("/preview-ajax.php", {id: productId}, function(data) {
 			$( "#modal-preview" ).html(data);
 			openModalPreview();
 		});
