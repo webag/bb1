@@ -1,0 +1,259 @@
+.s-basket{
+	padding: 30px 0 50px 0;
+	@include res(xl){
+		padding: 20px 0 40px 0;
+	}
+}
+
+.basket{
+	display: flex;
+	align-items: stretch;
+	@include res(m){
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__left{
+		flex-shrink: 1;
+		width: 100%;
+	}
+
+	&__right{
+		position: relative;
+		width: 290px;
+		flex-shrink: 0;
+		margin-left: 30px;
+		@include res(xl){
+			width: 230px;
+			margin-left: 10px;
+		}
+		@include res(m){
+			margin-top: 40px;
+			margin-left: 0;
+		}
+	}
+}
+
+
+//basket-order
+.basket-order{
+	border: 1px solid $gray-border;
+	padding: 0 10px;
+	position: sticky;
+	top: 120px;
+	right: 0;
+	@include res(xl){
+		top: 110px;
+	}
+	@include res(l){
+		top: 60px;
+	}
+	@include res(m){
+		position: relative;
+		top: 0;
+	}
+
+	&__header{
+		height: 60px;
+		display: flex;
+		align-items: flex-end;
+		border-bottom: 1px solid $gray-border;
+		padding: 0 10px 4px;
+		@include res(xl){
+			height: 50px;
+		}
+	}
+
+	&__main{
+		padding: 25px 10px 4px 10px;
+		border-bottom: 1px solid $gray-border;
+		min-height: 190px;
+		@include res(xl){
+			min-height: 150px;
+		}
+	}
+
+	&__footer{
+		padding: 10px 10px 30px 10px;
+		@include res(xl){
+			padding: 10px 10px 20px 10px;
+		}
+
+		.btn-center{
+			padding-top: 10px;
+			@include res(xl){
+				padding-top: 0;
+			}
+
+			.btn{
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&__row{
+		margin-bottom: 15px;
+		display: flex;
+		justify-content: space-between;
+		white-space: nowrap;
+	}
+}
+//basket-order
+
+
+//basket-item-grid
+.basket-col{
+	flex-shrink: 0;
+
+	&--img{
+		width: 20%;
+	}
+
+	&--art{
+		width: 20%;
+	}
+
+	&--color{
+		width: 20%;
+	}
+
+	&--num{
+		width: 10%;
+	}
+
+	&--price{
+		width: 25%;
+	}
+
+	&--delete{
+		width: 5%;
+	}
+}
+//basket-item-grid
+
+
+//basket-header
+.basket-header{
+	display: flex;
+	border-bottom: 1px solid #dadada;
+	color: $gray-text;
+	align-items: flex-end;
+	text-align: center;
+	height: 60px;
+	padding-bottom: 4px;
+	@include res(xl){
+		height: 50px;
+	}
+	@include res(xs){
+		display: none;
+	}
+}
+//basket-header
+
+
+//basket-item
+.basket-item{
+	display: flex;
+	text-align: center;
+	align-items: center;
+	border-bottom: 1px solid #dadada;
+	padding: 10px 0;
+	@include res(xs){
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+
+	.basket-col{
+		@include res(xs){
+			width: 100%;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+	}
+
+	.basket-col--img{
+		img{
+			display: block;
+			max-width: 100%;
+			height: auto;
+			@include res(xs){
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+
+	.basket-col--num{
+		.text-input{
+			width: 50px;
+			height: 30px;
+			padding: 3px;
+			text-align: center;
+			@include res(xl){
+				width: 40px;
+			}
+		}
+	}
+
+	.price{
+		white-space: nowrap;
+
+		&--old{
+			color: $gray-text;
+			margin-right: 4px;
+		}
+	}
+
+	.basket-delete{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		background-color: #FFF;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		border: none;
+
+		&:hover{
+			background-color: $red;
+		}
+
+		&:before,&:after{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -1px;
+			margin-left: -7px;
+			width: 14px;
+			height: 2px;
+			background: $red;
+			transition: all 0.3s ease;
+			border-radius: 0;
+		}
+
+		&:hover:before,&:hover:after{
+			background-color: #FFF;
+		}
+
+		&:before{
+			transform: rotate(-45deg);
+		}
+
+		&:after{
+			transform: rotate(45deg);
+		}
+
+		&:focus{
+			outline: none;
+			&:before,&:after{
+				outline: none;
+			}
+		}
+	}
+}
+//basket-item

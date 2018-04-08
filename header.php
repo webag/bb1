@@ -230,7 +230,7 @@
 						</div>
 					</div>
 					<div class="btn-center">
-						<a href="#" class="btn">Оформить заказ</a>
+						<a href="/basket.php" class="btn">Оформить заказ</a>
 					</div>
 				</div>
 			</div>

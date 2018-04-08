@@ -63,3 +63,18 @@ button::-moz-focus-inner {
 		border: 1px solid $black;
 	}
 }
+
+.btn--black{
+	border: 1px solid $black;
+	background: $black;
+	color: #FFF;
+
+	&:focus{
+		border: 1px solid $black;
+	}
+
+	&:hover{
+		background: #FFF;
+		color: $black;
+	}
+}
