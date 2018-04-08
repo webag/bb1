@@ -233,14 +233,25 @@
 	.top-btn{
 		display: flex;
 		min-width: 40px;
+		line-height: 50px;
 		width: auto;
 		padding: 0 5px;
+		@include res(xl){
+			line-height: 40px;
+		}
 
 		span{
 			padding-left: 5px;
 			font-size: 18px;
 			@include res(xl){
 				font-size: 14px;
+			}
+		}
+
+		i{
+			line-height: 50px;
+			@include res(xl){
+				line-height: 40px;
 			}
 		}
 	}

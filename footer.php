@@ -93,11 +93,6 @@
 	</div>
 
 
-	<div id="modal-preview" class="modal modal-preview">
-
-	</div>
-
-
 	<div id="modal-thanks" class="modal">
 		<p>Спасибо за заявку!</p>
 	</div>

@@ -37,15 +37,10 @@
 	@include cross();
 }
 
-.fancybox-slide--iframe .fancybox-content{
-	width: 90%;
-	height: 85%;
-	max-width: calc(100% - 40px);
-	max-height: calc(100% - 40px);
-	@include res(s){
-		width: 100%;
-		max-width: calc(100% - 10px);
-	}
+
+.fancybox-loading{
+	border: 3px solid $gray-interface;
+	border-top-color: #fff;
 }
 
 
@@ -133,15 +128,21 @@
 	width: 970px;
 	padding-left: 20px;
 	padding-right: 20px;
+	transition: all 0.3s ease;
+	transform: translate3d(0,-20px,0);
+	opacity: 0;
 	@include res(xl){
 		width: 780px;
 	}
 
 	.modal-slider-small,.modal-slider-big{
 		opacity: 0 !important;
+		height: 0;
+		overflow: hidden;
 		transition: opacity 1s ease;
 
 		&.modal-ready{
+			height: auto;
 			opacity: 1 !important;
 		}
 	}
@@ -165,6 +166,19 @@
 
 	.product-details{
 		padding-left: 0;
+	}
+}
+
+.fancybox-slide--complete {
+	.modal-preview {
+		transform: translate3d(0,0,0);
+		opacity: 1;
+	}
+}
+
+.fancybox-is-closing{
+	.modal-preview {
+		transform: translate3d(0,20px,0);
 	}
 }
 //modal-preview

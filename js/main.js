@@ -606,14 +606,12 @@ function updateModalSliders() {
 	modalSliders.addClass('modal-ready');
 }
 
-function openModalPreview() {
+function openModalPreview(src) {
 	$.fancybox.open({
-		src  : '#modal-preview',
-		type : 'inline',
-		opts : {
-			backFocus: false,
-			touch: false,
-			beforeLoad : function() {
+		src: src,
+		type: 'ajax',
+		opts: {
+			afterLoad : function() {
 				initModalSliders();
 			},
 			afterShow : function() {
@@ -631,10 +629,7 @@ $(function($){
 	$(document).on('click','[data-preview]',function (e) {
 		e.preventDefault();
 		var productId = $(this).data('preview');
-		$.get("/preview-ajax.php", {id: productId}, function(data) {
-			$( "#modal-preview" ).html(data);
-			openModalPreview();
-		});
+		openModalPreview('/preview-ajax.php?productID=' + productId);
 	})
 });
 /***********************
