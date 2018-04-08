@@ -146,7 +146,7 @@
 								<span></span>
 							</label>
 						</div>
-						<button class="btn btn--mini">Просмотр</button>
+						<button class="btn btn--mini" data-preview="ProductID">Просмотр</button>
 					</footer>
 				</div>
 			</div>
@@ -179,7 +179,7 @@
 								<span></span>
 							</label>
 						</div>
-						<button class="btn btn--mini">Просмотр</button>
+						<button class="btn btn--mini" data-preview="ProductID">Просмотр</button>
 					</footer>
 				</div>
 			</div>
@@ -201,7 +201,7 @@
 						</div>
 					</main>
 					<footer class="product-preview__footer">
-						<button class="btn btn--mini">Просмотр</button>
+						<button class="btn btn--mini" data-preview="ProductID">Просмотр</button>
 					</footer>
 				</div>
 			</div>

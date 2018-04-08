@@ -29,7 +29,7 @@
 		left: 244px !important;
 		top: 44px !important;
 		right: initial !important;
-		z-index: 7;
+		z-index: 15;
 		transform: translate3d(0,-50px,0);
 		visibility: hidden;
 		opacity: 0;
@@ -151,7 +151,7 @@
 		top: 0;
 		left: 0;
 		height: 100%;
-		z-index: 5;
+		z-index: 15;
 		border-radius: 0;
 		overflow: auto;
 		width: 240px;
@@ -233,6 +233,9 @@
 
 	.style-checkbox{
 		margin-bottom: 5px;
+		@include res(l){
+			margin-bottom: 8px;
+		}
 
 		&:last-child{
 			margin-bottom: 0;
@@ -255,7 +258,7 @@
 .filter-mod{
 	position: absolute;
 	display: block;
-	z-index: 4;
+	z-index: 13;
 	left: 100%;
 	top: 30px;
 	background: $gray-bg;

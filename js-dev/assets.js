@@ -4,3 +4,4 @@
 //@prepros-append vendors/waypoints.js
 //@prepros-append vendors/slick.min.js
 //@prepros-append vendors/jquery.nice-select.min.js
+//@prepros-append vendors/imagesLoaded.js

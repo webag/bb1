@@ -475,7 +475,7 @@ Catalog END
 /***********************
 Catalog-detail BEGIN
 ***********************/
-$(function($){
+function initProductSliders() {
 	$('.product-slider-small').slick({
 		arrows: true,
 		dots: false,
@@ -496,6 +496,11 @@ $(function($){
 		infinite: false,
 		asNavFor: '.product-slider-small'
 	});
+}
+
+
+$(function($){
+	initProductSliders();
 
 	var relatedNavBtns = $('.related-nav button');
 	var relatedTabs = $('.related-tab');
@@ -550,4 +555,88 @@ $(function($){
 });
 /***********************
 Catalog-detail END
+***********************/
+
+
+/***********************
+Preview Ajax BEGIN
+***********************/
+function initModalSliders() {
+	$('.modal-slider-small').slick({
+		arrows: true,
+		dots: false,
+		vertical: true,
+		verticalSwiping: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		infinite: false,
+		asNavFor: '.modal-slider-big',
+		focusOnSelect: true,
+		prevArrow: '<button type="button" class="slick-prev"><i class="i-up"></i></button>',
+		nextArrow: '<button type="button" class="slick-next"><i class="i-down"></i></button>',
+		responsive: [
+			{
+				breakpoint: 1025,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	$('.modal-slider-big').slick({
+		arrows: false,
+		dots: false,
+		infinite: false,
+		asNavFor: '.modal-slider-small'
+	});
+}
+
+function updateModalSliders() {
+	var modalSliders = $('.modal-slider-small,.modal-slider-big');
+	modalSliders.slick('setPosition');
+	modalSliders.addClass('modal-ready');
+}
+
+function openModalPreview() {
+	$.fancybox.open({
+		src  : '#modal-preview',
+		type : 'inline',
+		opts : {
+			backFocus: false,
+			touch: false,
+			beforeLoad : function() {
+				initModalSliders();
+			},
+			afterShow : function() {
+				$('.modal-slider-small,.modal-slider-big').imagesLoaded({},
+					function() {
+						updateModalSliders();
+					}
+				);
+			}
+		}
+	});
+}
+
+$(function($){
+	$(document).on('click','[data-preview]',function (e) {
+		e.preventDefault();
+		var productId = $(this).data('preview');
+		$.get("/preview-ajax.html", {id: productId}, function(data) {
+			$( "#modal-preview" ).html(data);
+			openModalPreview();
+		});
+	})
+});
+/***********************
+Preview Ajax END
 ***********************/

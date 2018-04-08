@@ -42,6 +42,14 @@
 }
 
 .product-slider-small{
+	opacity: 0;
+	height: 0;
+	transition: all 0.3s ease;
+
+	&.slick-initialized{
+		opacity: 1;
+		height: auto;
+	}
 
 	&__item{
 		width: 100%;
@@ -72,6 +80,14 @@
 }
 
 .product-slider-big{
+	opacity: 0;
+	height: 0;
+	transition: all 0.3s ease;
+
+	&.slick-initialized{
+		opacity: 1;
+		height: auto;
+	}
 
 	&__item{
 		width: 100%;
@@ -184,6 +200,27 @@
 		text-transform: uppercase;
 		@include res(xl){
 			font-size: 12px;
+		}
+	}
+
+	&__more{
+		display: block;
+		padding-top: 20px;
+		@include res(xl){
+			padding-top: 0;
+		}
+
+		a{
+			color: $gray-text;
+			transition: color 0.3s ease;
+			&:hover{
+				color: $black;
+			}
+
+			i{
+				font-size: 10px;
+				margin-left: 4px;
+			}
 		}
 	}
 }

@@ -55,6 +55,7 @@
 </footer>
 
 
+
 <!-- Модальные окна -->
 <div class="modals-sec">
 
@@ -90,6 +91,12 @@
 			</label>
 		</form>
 	</div>
+
+
+	<div id="modal-preview" class="modal modal-preview">
+
+	</div>
+
 
 	<div id="modal-thanks" class="modal">
 		<p>Спасибо за заявку!</p>
