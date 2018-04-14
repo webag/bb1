@@ -121,6 +121,17 @@ label{cursor: pointer;}
 		pointer-events: none;
 		opacity: 0.4;
 	}
+
+	&--black{
+		span{
+			&:before{
+				border: 1px solid $black;
+			}
+			&:after{
+				background: $black;
+			}
+		}
+	}
 }
 //style-checkbox
 
@@ -134,3 +145,15 @@ label{cursor: pointer;}
 	margin-bottom: 5px;
 }
 //error-block
+
+
+//vertical-form
+.vertical-form{
+	.style-checkbox{
+		margin-bottom: 25px;
+		@include res(xl){
+			margin-bottom: 15px;
+		}
+	}
+}
+//vertical-form

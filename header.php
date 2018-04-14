@@ -210,7 +210,8 @@
 			</div>
 
 			<div class="top-panel-user">
-				<button class="top-btn top-btn--user"><i class="i-user"></i></button>
+				<!--<button class="top-btn top-btn--user"><i class="i-user"></i></button>-->
+				<a href="lk-profile.php" class="top-btn"><i class="i-user"></i></a>
 			</div>
 
 			<div class="top-panel-basket">
@@ -262,7 +263,7 @@
 						</label>
 						<label class="form-group">
 							<span class="form-group__label">Пароль:</span>
-							<input type="email" name="xxx" class="text-input">
+							<input type="password" name="xxx" class="text-input">
 							<a href="#" class="forgot-pass-link">Забыли пароль?</a>
 						</label>
 						<div class="social-login">
@@ -285,7 +286,7 @@
 						<p>Зарегистрируйтесь сейчас и воспользуйтесь всеми возможностями сайта.</p>
 						<p>В личном кабинете вы сможете получать персональную рассылку  новостей и акций, а также сохранять и отслеживать свои заказы.</p>
 					</div>
-					<a href="#" class="btn">Зарегистрироваться</a>
+					<a href="/registration.php" class="btn">Зарегистрироваться</a>
 				</div>
 			</div>
 

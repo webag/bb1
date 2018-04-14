@@ -58,6 +58,7 @@
 	margin-left: auto;
 	
 	.top-btn{
+		display: block;
 		background: transparent;
 		border: none;
 		color: #FFF;
@@ -91,6 +92,10 @@
 
 		i{
 			display: block;
+			line-height: 50px;
+			@include res(xl){
+				line-height: 40px;
+			}
 		}
 	}
 }
