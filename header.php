@@ -32,7 +32,7 @@
 	<meta property="og:image" content="/img/og.jpg">
 	<!-- og -->
 
-	<link href="css/main.css?v=14" rel="stylesheet">
+	<link href="css/main.css?v=15" rel="stylesheet">
 </head>
 
 <body>
@@ -298,7 +298,7 @@
 <section class="s-top-logo">
 	<div class="container">
 		<a href="/" title="На главную">
-			<img src="/img/logo.png" alt="logotype" width="155">
+			<img src="/img/logo.png" alt="logotype" width="150">
 		</a>
 	</div>
 </section>
