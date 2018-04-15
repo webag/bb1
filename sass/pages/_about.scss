@@ -1,0 +1,30 @@
+//s-banner
+.s-banner{
+	height: 375px;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	background-position: center top;
+	margin-top: 20px;
+	@include res(xs){
+		margin-top: 10px;
+	}
+	@include res(xl){
+		height: 0;
+		padding-bottom: 29.29%;
+	}
+}
+//s-banner
+
+
+//s-content
+.s-content{
+	padding: 20px 0 40px 0;
+
+	.user-content{
+		padding: 0 20px;
+		@include res(s){
+			padding: 0;
+		}
+	}
+}
+//s-content

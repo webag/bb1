@@ -80,6 +80,15 @@ h4,.h4{
 	}
 }
 
+h5,.h5{
+	font-size: 20px;
+	font-weight: normal;
+	text-transform: uppercase;
+	@include res(xl){
+		font-size: 16px;
+	}
+}
+
 .text-gray{
 	color: $gray-text;
 }
@@ -102,4 +111,77 @@ h4,.h4{
 	margin-bottom: 10px;
 	background: $gray-bg;
 	padding: 5px 10px;
+}
+
+
+.user-content{
+	p,ul,ol,table,img{
+		margin-bottom: 20px;
+		@include res(xl){
+			margin-bottom: 15px;
+		}
+	}
+
+	h1,.h1,.h2,.h2,h3,.h3,h4,.h4,h5,.h5{
+		margin-bottom: 5px;
+	}
+
+	img{
+		max-width: 100%;
+		height: auto;
+	}
+
+	ul,ol{
+		padding-left: 25px;
+	}
+
+	ul{
+		list-style: none;
+
+		li{
+			position: relative;
+
+			&:before{
+				content: '- ';
+			}
+		}
+	}
+
+	ol{
+		list-style: none;
+		counter-reset: ol;
+
+		li{
+			position: relative;
+			counter-increment: ol;
+
+			&:before{
+				content: counter(ol)') ';
+			}
+		}
+	}
+}
+
+
+.side-img{
+	display: flex;
+	align-items: flex-start;
+
+	img{
+		flex-shrink: 0;
+		width: 155px;
+		margin-right: 25px;
+		@include res(xl){
+			width: 120px;
+			margin-right: 20px;
+		}
+		@include res(s){
+			width: 100px;
+			margin-right: 15px;
+		}
+		@include res(xs){
+			width: 75px;
+			margin-right: 10px;
+		}
+	}
 }

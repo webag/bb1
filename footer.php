@@ -24,8 +24,8 @@
 			<div class="foot-menu">
 				<p class="foot-menu__title">BB1</p>
 				<ul>
-					<li><a href="#">О компании</a></li>
-					<li><a href="#" class="active">Франчайзинг</a></li>
+					<li><a href="/about.php">О компании</a></li>
+					<li><a href="/fran-trademark.php" class="active">Франчайзинг</a></li>
 					<li><a href="#">Магазины</a></li>
 					<li><a href="#">Контакты</a></li>
 					<li><a href="#">Новости</a></li>
@@ -45,7 +45,7 @@
 			<div class="foot-menu">
 				<p class="foot-menu__title">Информация</p>
 				<ul>
-					<li><a href="#">Условия обработки персональных данных</a></li>
+					<li><a href="/privacy.php">Условия обработки персональных данных</a></li>
 				</ul>
 			</div>
 

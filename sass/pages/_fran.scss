@@ -1,0 +1,60 @@
+.s-fran{
+	padding: 40px 0;
+}
+
+.fran{
+	display: flex;
+	@include res(m){
+		flex-wrap: wrap;
+	}
+
+	&__aside{
+		width: 200px;
+		flex-shrink: 0;
+		@include res(m){
+			width: 100%;
+			margin-bottom: 20px;
+		}
+	}
+
+	&__main{
+		padding-left: 50px;
+		width: 100%;
+		flex-shrink: 1;
+		@include res(xl){
+			padding-left: 40px;
+		}
+		@include res(l){
+			padding-left: 20px;
+		}
+		@include res(m){
+			width: 100%;
+			padding-left: 0;
+		}
+	}
+}
+
+
+.fran-variant{
+	text-align: center;
+	margin-bottom: 20px;
+
+	p{
+		text-transform: uppercase;
+	}
+}
+
+.fran-fin{
+	margin-bottom: 70px;
+	@include res(s){
+		margin-bottom: 40px;
+	}
+
+	ul{
+		padding-left: 0;
+	}
+
+	.text-big{
+		text-transform: uppercase;
+	}
+}

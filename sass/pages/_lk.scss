@@ -64,6 +64,10 @@
 				line-height: 1;
 				padding: 7px 10px;
 				transition: all 0.3s ease;
+				@include res(m){
+					margin: 0 4px 4px 0;
+					background: $gray-bg;
+				}
 
 				&:hover{
 					background: $gray-bg;
