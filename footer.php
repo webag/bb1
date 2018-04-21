@@ -28,7 +28,7 @@
 					<li><a href="/fran-trademark.php" class="active">Франчайзинг</a></li>
 					<li><a href="#">Магазины</a></li>
 					<li><a href="#">Контакты</a></li>
-					<li><a href="#">Новости</a></li>
+					<li><a href="/news.php">Новости</a></li>
 				</ul>
 			</div>
 

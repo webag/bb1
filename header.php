@@ -32,7 +32,7 @@
 	<meta property="og:image" content="/img/og.jpg">
 	<!-- og -->
 
-	<link href="css/main.css?v=16" rel="stylesheet">
+	<link href="css/main.css?v=17" rel="stylesheet">
 </head>
 
 <body>
@@ -147,11 +147,11 @@
 	<div class="mob-menu-static">
 		<p class="mob-menu-static__title">BB1</p>
 		<ul>
-			<li><a href="#">О компании</a></li>
-			<li><a href="#" class="active">Франчайзинг</a></li>
+			<li><a href="/about.php">О компании</a></li>
+			<li><a href="/fran-trademark.php" class="active">Франчайзинг</a></li>
 			<li><a href="#">Магазины</a></li>
 			<li><a href="#">Контакты</a></li>
-			<li><a href="#">Новости</a></li>
+			<li><a href="/news.php">Новости</a></li>
 		</ul>
 	</div>
 

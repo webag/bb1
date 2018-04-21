@@ -1,0 +1,88 @@
+.s-news{
+	padding-top: 20px;
+	padding-bottom: 70px;
+	@include res(xl){
+		padding-bottom: 40px;
+	}
+
+	.pagination{
+		padding-top: 10px;
+	}
+}
+
+.news-preview{
+	display: flex;
+	align-items: center;
+	margin-bottom: 70px;
+	@include res(xl){
+		margin-bottom: 60px;
+	}
+	@include res(s){
+		margin-bottom: 40px;
+	}
+
+	&__img{
+		flex-shrink: 0;
+		width: 50%;
+		overflow: hidden;
+		@include res(l){
+			width: 40%;
+		}
+		@include res(xs){
+			width: 35%;
+		}
+
+		img{
+			display: block;
+			max-width: 100%;
+			transition: transform 0.8s ease;
+		}
+		
+		&:hover{
+			img{
+				transform: scale3d(1.05,1.05,1.05);
+			}
+		}
+	}
+
+	&__content{
+		padding-left: 15px;
+		padding-right: 15px;
+		text-align: center;
+		flex: 1;
+		@include res(m){
+			padding-right: 0;
+		}
+
+		a{
+			@extend %link-hover-color;
+		}
+	}
+
+	&__title{
+		@include res(xs){
+			font-size: 16px;
+		}
+	}
+
+	&__descr{
+		margin-top: 40px;
+		@include res(xl){
+			margin-top: 25px;
+		}
+		@include res(xs){
+			margin-top: 10px;
+		}
+	}
+
+	time{
+		display: block;
+		margin-top: 50px;
+		@include res(xl){
+			margin-top: 35px;
+		}
+		@include res(xs){
+			margin-top: 20px;
+		}
+	}
+}

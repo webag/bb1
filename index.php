@@ -51,7 +51,7 @@
 
 <section class="s-title-panel">
 	<div class="container">
-		<p class="h1">BB1 Accessories: accessories are the part of life!</p>
+		<p class="h1">Accessories are the part of life!</p>
 	</div>
 </section>
 
