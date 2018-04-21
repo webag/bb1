@@ -42,6 +42,9 @@ h1,.h1{
 	line-height: 1;
 	font-weight: bold;
 	text-transform: uppercase;
+	@include note{
+		font-size: 24px;
+	}
 	@include res(xl){
 		font-size: 24px;
 	}

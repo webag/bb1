@@ -491,7 +491,27 @@ function initProductSliders() {
 		asNavFor: '.product-slider-big',
 		focusOnSelect: true,
 		prevArrow: '<button type="button" class="slick-prev"><i class="i-up"></i></button>',
-		nextArrow: '<button type="button" class="slick-next"><i class="i-down"></i></button>'
+		nextArrow: '<button type="button" class="slick-next"><i class="i-down"></i></button>',
+		responsive: [
+			{
+				breakpoint: 1440,
+				settings: {
+					slidesToShow: 3
+				}
+			},
+			{
+				breakpoint: 1290,
+				settings: {
+					slidesToShow: 4
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 3
+				}
+			}
+		]
 	});
 
 	$('.product-slider-big').slick({

@@ -2,6 +2,9 @@
 .s-home-slider{
 	height: 575px;
 	overflow: hidden;
+	@include note{
+		height: 460px;
+	}
 	@include res(xl){
 		height: 460px;
 	}
@@ -23,6 +26,9 @@
 	background-position: center top;
 	background-size: cover;
 	color: #FFF;
+	@include note{
+		height: 460px;
+	}
 	@include res(xl){
 		height: 460px;
 	}
@@ -73,6 +79,9 @@
 		line-height: 1.1;
 		margin-bottom: 0.2em;
 		text-transform: uppercase;
+		@include note{
+			font-size: 40px;
+		}
 		@include res(xl){
 			font-size: 40px;
 		}
@@ -146,7 +155,7 @@
 
 //s-home-promos
 .s-home-promos{
-	padding: 75px 0;
+	padding: 70px 0;
 	@include res(xl){
 		padding: 60px 0;
 	}
@@ -158,6 +167,7 @@
 
 .promo-row{
 	display: flex;
+	justify-content: center;
 	@include res(s){
 		flex-direction: column;
 		align-items: center;
@@ -165,6 +175,12 @@
 
 	&__big{
 		width: 55.1%;
+		@include note{
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-start;
+			width: 50%;
+		}
 		@include res(l){
 			width: 50%;
 		}
@@ -178,6 +194,10 @@
 		padding: 25px;
 		display: flex;
 		justify-content: flex-end;
+		@include note{
+			width: 50%;
+			justify-content: center;
+		}
 		@include res(xl){
 			padding: 20px;
 		}
@@ -198,6 +218,9 @@
 	position: relative;
 	text-align: center;
 	background: $black;
+	@include note{
+		width: 565px;
+	}
 	@include res(s){
 		max-width: 450px;
 		margin-bottom: 20px;
@@ -240,6 +263,9 @@
 
 .promo{
 	max-width: 450px;
+	@include note{
+		width: 370px;
+	}
 	@include res(xl){
 		max-width: 360px;
 	}
@@ -317,8 +343,23 @@
 		margin-bottom: 0;
 	}
 
+	&:nth-child(2n){
+		.promo-full__img{
+			@include note{
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-start;
+				padding-right: 15px;
+			}
+		}
+	}
+
 	&__img{
 		width: 55.1%;
+		@include note{
+			width: 50%;
+			padding-left: 15px;
+		}
 		@include res(l){
 			width: 45%;
 		}
@@ -331,6 +372,9 @@
 			display: block;
 			width: 100%;
 			height: auto;
+			@include note{
+				max-width: 530px;
+			}
 		}
 	}
 
@@ -338,6 +382,9 @@
 		width: 44.9%;
 		padding: 25px;
 		text-align: center;
+		@include note{
+			width: 50%;
+		}
 		@include res(l){
 			width: 55%;
 		}
@@ -376,6 +423,9 @@
 //s-home-intros
 .s-home-intros{
 	padding: 95px 0;
+	@include note{
+		padding: 70px 0;
+	}
 	@include res(xl){
 		padding: 80px 0;
 	}
@@ -449,6 +499,11 @@
 	}
 
 	.product-preview{
+		@include note{
+			width: 320px;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		@include res(s){
 			margin: 0 auto;
 			max-width: 320px;
