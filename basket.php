@@ -22,7 +22,11 @@
 						<div class="basket-col basket-col--art">940116</div>
 						<div class="basket-col basket-col--color">Бордо крокодил</div>
 						<div class="basket-col basket-col--num">
-							<input type="text" title="Кол-во" value="1" class="text-input">
+							<div class="num-block">
+								<button>-</button>
+								<input type="text" title="Кол-во" value="1" class="text-input">
+								<button>+</button>
+							</div>
 						</div>
 						<div class="basket-col basket-col--price">
 							<div class="prices">
@@ -41,7 +45,11 @@
 						<div class="basket-col basket-col--art">940116</div>
 						<div class="basket-col basket-col--color">Черный</div>
 						<div class="basket-col basket-col--num">
-							<input type="text" title="Кол-во" value="1" class="text-input">
+							<div class="num-block">
+								<button>-</button>
+								<input type="text" title="Кол-во" value="1" class="text-input">
+								<button>+</button>
+							</div>
 						</div>
 						<div class="basket-col basket-col--price">
 							<div class="prices">
@@ -59,7 +67,11 @@
 						<div class="basket-col basket-col--art">940116</div>
 						<div class="basket-col basket-col--color">Бордо крокодил</div>
 						<div class="basket-col basket-col--num">
-							<input type="text" title="Кол-во" value="1" class="text-input">
+							<div class="num-block">
+								<button>-</button>
+								<input type="text" title="Кол-во" value="1" class="text-input">
+								<button>+</button>
+							</div>
 						</div>
 						<div class="basket-col basket-col--price">
 							<div class="prices">
@@ -78,7 +90,11 @@
 						<div class="basket-col basket-col--art">940116</div>
 						<div class="basket-col basket-col--color">Черный</div>
 						<div class="basket-col basket-col--num">
-							<input type="text" title="Кол-во" value="1" class="text-input">
+							<div class="num-block">
+								<a>-</a>
+								<input type="text" title="Кол-во" value="1" class="text-input">
+								<a>+</a>
+							</div>
 						</div>
 						<div class="basket-col basket-col--price">
 							<div class="prices">
