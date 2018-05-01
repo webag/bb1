@@ -679,9 +679,12 @@ $(function($){
 });
 
 
-BX.addCustomEvent('onAjaxSuccess', function () {
-	StyleSoaCheckboxes();
-});
+try {
+	BX.addCustomEvent('onAjaxSuccess', function () {
+		StyleSoaCheckboxes();
+	});
+} catch (err) {}
+
 
 /***********************
  soa radio checkboxes END
