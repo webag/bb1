@@ -659,3 +659,30 @@ $(function($){
 /***********************
 Preview Ajax END
 ***********************/
+
+
+/***********************
+ soa radio checkboxes BEGIN
+ ***********************/
+function StyleSoaCheckboxes() {
+	$('.s-order .radio-inline,.bx-soa-pp-company').each(function (){
+		var thisInput = $(this).find('input');
+		var thisFigure = thisInput.next('figure');
+		if (!thisFigure.length){
+			$('<figure></figure>').insertAfter(thisInput)
+		}
+	})
+}
+
+$(function($){
+	StyleSoaCheckboxes();
+});
+
+
+BX.addCustomEvent('onAjaxSuccess', function () {
+	StyleSoaCheckboxes();
+});
+
+/***********************
+ soa radio checkboxes END
+ ***********************/

@@ -42,6 +42,7 @@ h1,.h1{
 	line-height: 1;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin: 0;
 	@include note{
 		font-size: 24px;
 	}
@@ -63,6 +64,7 @@ h2,.h2{
 	line-height: 1.1;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin: 0;
 	@include res(xl){
 		font-size: 20px;
 	}
@@ -71,6 +73,7 @@ h2,.h2{
 h3,.h3{
 	font-size: 24px;
 	line-height: 1.2;
+	margin: 0;
 	@include res(xl){
 		font-size: 20px;
 	}

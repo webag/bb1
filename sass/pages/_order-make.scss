@@ -1,0 +1,671 @@
+a{
+	&:hover{
+		//color: inherit;
+		text-decoration: none;
+	}
+	&:focus{
+		text-decoration: none;
+		//color: inherit;
+		outline: none;
+	}
+}
+
+ul,ol,p{
+	margin-bottom: 0;
+}
+
+.s-order{
+	padding-bottom: 40px;
+
+	.bx-soa{
+		@include res(m){
+			width: 100%;
+		}
+	}
+
+	//sections
+	.bx-soa-section{
+		border: none;
+		margin-bottom: 10px;
+
+		&.bx-selected{
+			border: none;
+
+			.bx-soa-section-title-container{
+				padding: 30px 0 5px 0;
+			}
+
+			.bx-soa-section-title{
+				font-size: 18px;
+				@include res(xl){
+					font-size: 16px;
+				}
+			}
+		}
+
+		&.bx-step-completed{
+			border: none;
+
+			.bx-soa-section-content{
+				font-size: 14px;
+				line-height: 1.3;
+				color: $gray-text;
+
+				strong{
+					color: $black;
+				}
+			}
+
+			.bx-soa-section-title-count{
+				background: transparent;
+				border: 1px solid $black;
+			}
+		}
+
+		&.bx-step-error{
+			background: #fff3f2;
+			border: none;
+
+			.bx-soa-section-title-count{
+				&:before{
+					display: none;
+				}
+			}
+
+			.bx-soa-section-title-count{
+				background: $red;
+				border: 1px solid $red;
+			}
+		}
+
+		&.bx-step-completed{
+			.bx-soa-section-title-container{
+				cursor: pointer;
+				transition: background 0.3s ease;
+				&:hover{
+					background: $gray-bg;
+				}
+			}
+		}
+
+		.bx-soa-section-title-count{
+			width: 20px;
+			height: 20px;
+			border-radius: 0;
+			border: 1px solid $black;
+
+			&:after{
+				display: none;
+			}
+
+			&:before{
+				background: none;
+				border-left: 1px solid $black;
+				border-bottom: 1px solid $black;
+				width: 11px;
+				height: 6px;
+				right: 3px;
+				bottom: 7px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+
+	.bx-soa-section-title-container{
+		background: none;
+		padding: 30px 0 5px 0;
+		border-bottom: 1px solid $gray-border;
+	}
+
+	.bx-soa-section-title{
+		font-size: 18px;
+		font-family: $font;
+		font-weight: normal;
+		padding-left: 0;
+		text-transform: none;
+		border-radius: 0;
+		padding-top: 0;
+		@include res(xl){
+			font-size: 16px;
+		}
+	}
+
+	.bx-soa-editstep{
+		font-size: 14px;
+		color: $gray-text;
+		border: none;
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $black;
+		}
+	}
+
+	.bx-soa-section-content{
+		padding: 20px 0 0 0;
+	}
+
+	.bx-soa-more{
+		border: none;
+	}
+	//sections
+
+
+	//buttons
+	.pull-right.btn{
+		@extend .btn--black;
+		border-radius: 0;
+
+		&:hover{
+			border: 1px solid $black;
+		}
+	}
+
+	.pull-left.btn{
+		@extend .btn;
+		color: $black;
+		border-radius: 0;
+
+		&:hover{
+			border: 1px solid $black;
+		}
+	}
+	//buttons
+
+
+	//sidebar
+	.bx-soa-cart-total{
+		border-radius: 0;
+		border: 1px solid $gray-border;
+		padding-left: 10px;
+		padding-right: 10px;
+
+		.bx-soa-cart-total-line{
+			font-size: 16px;
+			@include res(xl){
+				font-size: 14px;
+			}
+
+			&:first-child{
+				.bx-soa-cart-t{
+					font-weight: normal;
+				}
+			}
+		}
+
+		.bx-soa-cart-total-line-total{
+			padding-top: 7px;
+			border-top: 1px solid $gray-border;
+
+			.bx-soa-cart-t{
+				font-weight: normal;
+			}
+
+			.bx-soa-cart-d{
+				font-size: 16px;
+				@include res(xl){
+					font-size: 14px;
+				}
+			}
+		}
+
+		.btn.btn-default{
+			@extend .btn--black;
+			border-radius: 0;
+
+			&:hover{
+				border: 1px solid $black;
+			}
+		}
+	}
+	//sidebar
+
+
+	//inputs
+	.form-group{
+
+		.form-control{
+			@extend .text-input;
+			background: #FFF;
+			height: auto;
+
+			&:focus{
+				outline: none;
+				box-shadow: none;
+			}
+		}
+	}
+
+	.bx-soa-reference{
+		padding-top: 0;
+		margin-top: -10px;
+		font-size: 14px;
+		color: $gray-text;
+		padding-bottom: 10px;
+	}
+
+	.bx-soa .bx-soa-custom-label{
+		font-size: 16px;
+		font-weight: normal;
+		padding-left: 20px;
+		@include res(xl){
+			font-size: 14px;
+		}
+	}
+
+	.bx-soa-coupon-input{
+		input[type=text].form-control{
+			border-radius: 0;
+			border: 1px solid $gray-border;
+			background-color: #ffffff;
+		}
+	}
+	//inputs
+
+
+	//местоположения
+	.bx-sls,.bx-slst {
+		.form-control.dropdown-block{
+			background-color: #ffffff;
+			@extend .text-input;
+			padding: 7px 40px 6px 40px;
+			transition: none;
+			@include res(s){
+				padding: 7px 30px 6px 30px;
+			}
+		}
+
+		.dropdown-icon{
+			left: 15px;
+			top: 17px;
+			@include res(s){
+				left: 10px;
+			}
+		}
+
+		.dropdown-fade2white{
+			background: transparent;
+		}
+
+		.bx-ui-sls-clear{
+			cursor: pointer;
+			transition: all 0.3s ease;
+			background: transparent;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			border: none;
+			margin-top: 0;
+			top: 8px;
+			right: 5px;
+
+			&:hover{
+				background-color: #c74b3a;
+			}
+
+			&:before,&:after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-top: -1px;
+				margin-left: -7px;
+				width: 14px;
+				height: 2px;
+				background-color: #a3a3a3;
+				transition: all 0.3s ease;
+			}
+
+			&:hover:before,&:hover:after{
+				background-color: #FFF;
+			}
+
+			&:before{
+				transform: rotate(-45deg);
+			}
+
+			&:after{
+				transform: rotate(45deg);
+			}
+		}
+
+		.bx-ui-combobox-toggle{
+			margin-top: 0;
+			right: 8px;
+			top: 8px;
+			@include res(s){
+				right: 2px;
+			}
+		}
+
+		.bx-ui-sls-pane{
+			border: 1px solid $gray-border;
+			top: 48px;
+			box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+		}
+
+		.bx-ui-sls-variants{
+			a{
+				//color: $orange;
+				text-decoration: underline;
+
+				&:hover{
+					color: $green;
+				}
+			}
+		}
+
+		.quick-location-tag{
+			font-size: 16px;
+			padding: 8px 15px;
+			border-radius: 25px;
+			background: transparent;
+			border: 1px solid $gray-border;
+			color: $gray-text;
+
+			&:hover{
+				background: transparent;
+				border: 1px solid $green;
+				color: $green;
+			}
+		}
+	}
+
+	.bx-sls{
+		.bx-ui-sls-container{
+			min-height: 33px;
+		}
+
+		.bx-ui-sls-variants .bx-ui-sls-variant:hover, .bx-ui-sls-variant-active{
+			background-color: $gray-bg;
+		}
+	}
+
+	.bx-slst{
+		.bx-ui-combobox-dropdown{
+			border: 1px solid $gray-border;
+			border-radius: 10px;
+			top: 48px;
+			box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+		}
+
+		.bx-ui-combobox-variant:hover, .bx-ui-combobox-variant-active{
+			background-color: #ffe9d8;
+		}
+
+		.bx-ui-combobox-fake{
+
+			@include res(s){
+				font-size: 12px;
+			}
+		}
+		.form-control .bx-ui-combobox-container .bx-combobox-fake-as-input{
+			@include res(s){
+				padding-top: 9px;
+			}
+		}
+	}
+
+	.bx-soa .bx-soa-location-input-container:before{
+		display: none;
+	}
+	//местоположения
+
+
+	//корзина
+	.bx-soa-item-td-title{
+		color: $gray-text;
+		font-size: 16px;
+		@include res(xl){
+			font-size: 14px;
+		}
+	}
+
+	.bx-soa-item-tr{
+		font-size: 16px;
+		color: $black;
+		@include res(xl){
+			font-size: 14px;
+		}
+
+		strong{
+			font-weight: normal;
+		}
+	}
+
+	.bx-soa-item-td{
+		border-top: 1px solid #dadada;
+	}
+
+	.bx-soa-item-title{
+		font-weight: normal;
+		line-height: 1.2;
+
+		a{
+			transition: color 0.3s ease;
+			&:hover{
+				color: $gray-text;
+			}
+		}
+	}
+
+	.bx-soa-item-imgcontainer{
+		border: none;
+		border-radius: 0;
+	}
+	//корзина
+
+
+	//radio-inline
+	.bx-soa .radio-inline{
+		padding-left: 0;
+
+		label {
+			font-size: 16px;
+			margin-bottom: 10px;
+			font-weight: normal;
+			padding-bottom: 0;
+			position: relative;
+			@include res(xl){
+				font-size: 14px;
+			}
+
+			input{
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 0;
+
+				&:checked + figure{
+					&:after{
+						opacity: 1;
+					}
+				}
+				&[type='radio'] {
+					&:checked + figure {
+						&:after{
+							opacity: 1;
+						}
+					}
+				}
+
+				&.error + figure{
+					&:before{
+						border-color: #cc0000;
+					}
+				}
+			}
+
+			figure{
+				display: inline;
+				position: relative;
+				padding-left: 20px;
+
+				&:before{
+					content: '';
+					width: 12px;
+					height: 12px;
+					border: 1px solid $gray-interface;
+					border-radius: 6px;
+					position: absolute;
+					left: 0;
+					top: 2px;
+					transition: all 0.3s ease;
+				}
+
+				&:after{
+					content: '';
+					width: 8px;
+					height: 8px;
+					background: $gray-interface;
+					border-radius: 4px;
+					position: absolute;
+					left: 2px;
+					top: 4px;
+					z-index: 2;
+					opacity: 0;
+					transition: opacity 0.3s ease;
+				}
+			}
+
+			&:hover {
+				figure {
+					&:before {
+						border-color: $black;
+					}
+				}
+			}
+		}
+	}
+	//radio-inline
+
+
+	//доставка и оплата
+	.bx-soa-pp-item-container{
+		.bx-soa-pp-company{
+			z-index: 10;
+			cursor: pointer;
+			.bx-soa-pp-company-graf-container{
+				border: 1px solid $gray-border;
+			}
+
+			&.bx-selected .bx-soa-pp-company-graf-container{
+				border: 1px solid $black;
+			}
+
+			&:hover{
+				.bx-soa-pp-company-graf-container{
+					border: 1px solid $black;
+				}
+			}
+
+			.bx-soa-pp-delivery-cost{
+				background: $gray-border;
+				color: #FFF;
+				border-radius: 0;
+				bottom: 0;
+				right: 0;
+				font-size: 12px;
+			}
+
+			.bx-soa-pp-company-smalltitle{
+				font-size: 14px;
+				line-height: 1.2;
+				color: $black;
+			}
+
+			input{
+				opacity: 0;
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin-left: 0;
+
+				&:checked + figure{
+					&:after{
+						opacity: 1;
+					}
+				}
+				&[type='radio'] {
+					&:checked + figure {
+						&:after{
+							opacity: 1;
+						}
+					}
+				}
+
+				&.error + figure{
+					&:before{
+						border-color: #cc0000;
+					}
+				}
+			}
+
+			figure{
+				display: inline;
+				position: absolute;
+				z-index: 5;
+				top: 8px;
+				left: 8px;
+				padding-left: 20px;
+
+				&:before{
+					content: '';
+					width: 12px;
+					height: 12px;
+					border: 1px solid $gray-interface;
+					border-radius: 6px;
+					position: absolute;
+					left: 0;
+					top: 2px;
+					transition: all 0.3s ease;
+				}
+
+				&:after{
+					content: '';
+					width: 8px;
+					height: 8px;
+					background: $gray-interface;
+					border-radius: 4px;
+					position: absolute;
+					left: 2px;
+					top: 4px;
+					z-index: 2;
+					opacity: 0;
+					transition: opacity 0.3s ease;
+				}
+			}
+		}
+	}
+
+	.bx-soa-pp-desc-container{
+		.bx-soa-pp-company-subTitle{
+			@extend .text-big;
+			font-weight: normal;
+			margin-bottom: 5px;
+		}
+
+		.bx-soa-pp-company{
+			z-index: 10;
+			cursor: default;
+			border: none;
+			background: transparent;
+			padding: 0;
+
+			.bx-soa-pp-company-graf-container{
+				border: 1px solid $gray-border;
+			}
+		}
+	}
+	//доставка и оплата
+
+	#bx-soa-orderSave{
+		text-align: center;
+
+		.pull-right.btn{
+			float: none !important;
+		}
+	}
+}
+
