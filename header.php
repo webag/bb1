@@ -318,6 +318,13 @@
 					<li data-sub="sub_4"><a href="/catalog.php">Аксессуары</a></li>
 					<li data-sub="sub_5"><a href="/catalog.php">Print color</a></li>
 					<li class="menu-red" data-sub="sub_6"><a href="/catalog.php">Sale</a></li>
+					<li class="menu-red"><a href="/catalog.php">Новинки</a></li>
+					<li><a href="/catalog.php">Ремни</a></li>
+					<li ><a href="/catalog.php">Пряжки</a></li>
+					<li ><a href="/catalog.php">Сумки</a></li>
+					<li ><a href="/catalog.php">Аксессуары</a></li>
+					<li ><a href="/catalog.php">Print color</a></li>
+					<li class="menu-red"><a href="/catalog.php">Sale</a></li>
 				</ul>
 			</nav>
 		</div>

@@ -229,6 +229,7 @@ $(function($){
 	}
 
 	var timer;
+	var timer2;
 	var delay = 150;
 
 	$('[data-sub]').on('pointerenter touchstart',function () {
@@ -240,12 +241,21 @@ $(function($){
 	});
 
 	$('.s-menu').on('pointerleave',function () {
-		closeSubMenu();
 		clearTimeout(timer);
+		setTimeout(function() {
+			closeSubMenu();
+		}, delay);
+	});
+
+	$('.top-menu-panel').on('pointerenter touchstart',function () {
+		clearTimeout(timer);
+		clearTimeout(timer2);
 	});
 
 	$('.top-menu li').not('[data-sub]').on('pointerenter touchstart',function () {
-		closeSubMenu();
+		timer2 = setTimeout(function() {
+			closeSubMenu();
+		}, delay);
 		clearTimeout(timer);
 	});
 
@@ -485,7 +495,7 @@ function initProductSliders() {
 		dots: false,
 		vertical: true,
 		verticalSwiping: true,
-		slidesToShow: 4,
+		slidesToShow: 3,
 		slidesToScroll: 1,
 		infinite: false,
 		asNavFor: '.product-slider-big',
@@ -493,12 +503,6 @@ function initProductSliders() {
 		prevArrow: '<button type="button" class="slick-prev"><i class="i-up"></i></button>',
 		nextArrow: '<button type="button" class="slick-next"><i class="i-down"></i></button>',
 		responsive: [
-			{
-				breakpoint: 1440,
-				settings: {
-					slidesToShow: 3
-				}
-			},
 			{
 				breakpoint: 1290,
 				settings: {

@@ -33,16 +33,21 @@
 		list-style: none;
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		max-width: 1030px;
 		margin-left: auto;
 		margin-right: auto;
 		@include res(xl){
-			max-width: 830px;
+			//max-width: 830px;
 		}
 
 		li{
 			display: inline-block;
-			flex: 1;
+			//flex: 1;
+			min-width: 140px;
+			@include res(xl){
+				min-width: 100px;
+			}
 
 			a{
 				position: relative;

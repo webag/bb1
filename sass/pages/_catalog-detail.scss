@@ -11,6 +11,7 @@
 	}
 
 	&__thumbs{
+		position: relative;
 		width: 130px;
 		flex-shrink: 0;
 		margin-right: 40px;
@@ -30,7 +31,7 @@
 	&__full{
 		width: calc(100% - 130px - 40px);
 		@include res(xl){
-			width: calc(100% - 100px - 40px);
+			width: calc(100% - 130px - 40px);
 		}
 		@include res(l){
 			width: calc(100% - 65px - 20px);

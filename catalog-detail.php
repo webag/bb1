@@ -5,7 +5,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="grid-8 grid-7_xxl grid-8_xl grid-7_l grid-12_s">
+			<div class="grid-7 grid-12_s">
 				<div class="product-sliders">
 					<div class="product-sliders__thumbs">
 						<div class="product-slider-small vertical-arrows">
@@ -48,7 +48,7 @@
 				</div>
 			</div>
 
-			<div class="grid-4 grid-5_xxl grid-4_xl grid-5_l grid-12_s">
+			<div class="grid-5 grid-12_s">
 				<div class="product-details">
 					<p class="h3 product-details__title">Сумка поясная BB1 MILANO</p>
 					<p class="text-gray product-details__art">арт. 940119</p>
