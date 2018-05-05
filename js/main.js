@@ -343,13 +343,18 @@ function closeTopBasket() {
 }
 
 $(function($){
-	$('.top-btn--basket').on('click',function () {
+	$('.add_to_cart').on('click',function () {
 		var topBasket = $('.top-basket');
-		if (topBasket.hasClass('opened')){
+		openTopBasket();
+		setTimeout(function(){
+			closeTopBasket();},
+			2000);
+
+		/*if (topBasket.hasClass('opened')){
 			closeTopBasket();
 		} else {
 			openTopBasket();
-		}
+		}*/
 	});
 
 	$(document).on('mouseup touchstart',function (e){

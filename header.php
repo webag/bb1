@@ -32,7 +32,7 @@
 	<meta property="og:image" content="/img/og.jpg">
 	<!-- og -->
 
-	<link href="css/main.css?v=18" rel="stylesheet">
+	<link href="css/main.css?v=19" rel="stylesheet">
 </head>
 
 <body>
@@ -45,9 +45,9 @@
 		<a href="#" class="cities-chooser__current fancy-modal" rel="nofollow" data-src="#modal-cities">Санкт-Петербург</a>
 	</div>
 
-	<div class="top-phone">
+	<?php /*?><div class="top-phone">
 		<a href="tel:89220007777">8(922)000-77-77</a>
-	</div>
+	</div><?php */?>
 
 	<ul class="mob-menu">
 		<li><a href="#" class="menu-red">Новинки</a></li>
@@ -195,9 +195,9 @@
 				<a href="#" class="cities-chooser__current fancy-modal" rel="nofollow" data-src="#modal-cities">Санкт-Петербург</a>
 			</div>
 
-			<div class="top-phone">
+			<?php /*?><div class="top-phone">
 				<a href="tel:89220007777">8(922)000-77-77</a>
-			</div>
+			</div><?php */?>
 
 			<button class="top-btn fancy-modal" data-src="#modal-cities" title="Выбрать город"><i class="i-pin"></i></button>
 
@@ -215,7 +215,7 @@
 			</div>
 
 			<div class="top-panel-basket">
-				<button class="top-btn top-btn--basket"><i class="i-basket"></i><span>15</span></button>
+				<a href="/basket.php" class="top-btn top-btn--basket"><i class="i-basket"></i><span>15</span></a>
 				<div class="top-basket">
 					<div class="top-basket-items">
 						<div class="top-basket-item">
