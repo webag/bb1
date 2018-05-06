@@ -1,9 +1,9 @@
 .s-menu{
 	position: relative;
 	z-index: 15;
-	height: 50px;
+	height: 100px;
 	@include res(xl){
-		height: 48px;
+		height: 96px;
 	}
 	@include res(l){
 		display: none;
