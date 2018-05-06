@@ -32,7 +32,7 @@
 	<meta property="og:image" content="/img/og.jpg">
 	<!-- og -->
 
-	<link href="css/main.css?v=21" rel="stylesheet">
+	<link href="css/main.css?v=22" rel="stylesheet">
 </head>
 
 <body>
