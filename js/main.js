@@ -659,6 +659,15 @@ function openModalPreview(src) {
 	});
 }
 
+window.addEventListener("orientationchange", function() {
+	var modalSliders = $('.modal-slider-small,.modal-slider-big');
+	modalSliders.removeClass('modal-ready');
+	setTimeout(function () {
+		modalSliders.slick('setPosition');
+		modalSliders.addClass('modal-ready');
+	},2000);
+});
+
 $(function($){
 	$(document).on('click','[data-preview]',function (e) {
 		e.preventDefault();
