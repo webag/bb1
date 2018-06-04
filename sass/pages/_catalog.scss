@@ -90,6 +90,8 @@
 //catalog-aside
 .catalog-aside{
 	order: 1;
+	position: relative;
+	padding-bottom: 60px;
 	@include res(l){
 		order: 2;
 		display: flex;
@@ -125,6 +127,34 @@
 		@include res(xs){
 			padding-top: 0;
 			padding-left: 15px;
+		}
+	}
+
+	&__to-top{
+		width: 40px;
+		height: 40px;
+		border: 2px solid $gray-border;
+		border-radius: 50%;
+		color: $gray-border;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+
+		&:hover{
+			border: 2px solid $black;
+			color: $black;
+		}
+
+		i{
+			position: relative;
+			top: -0.05em;
 		}
 	}
 }

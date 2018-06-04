@@ -21,7 +21,7 @@
 </section>
 
 
-<section class="s-catalog">
+<section class="s-catalog" id="s-acatalog">
 	<div class="container">
 		<div class="row">
 
@@ -214,6 +214,8 @@
 				</div>
 
 				<div class="catalog-aside__decr">«ВВ1 Accessories» производит женские и мужские сумки из натуральной кожи. В изделиях используется только качественная натуральная кожа от зарубежных производителей, а также импортная фурнитура. Дизайнеры «BB1» разрабатывают современные модели сумок, соответствующие последним тенденциям моды. </div>
+
+				<div class="catalog-aside__to-top" title="Наверх"><i class="i-up"></i></div>
 
 			</div>
 			<!--aside-->
