@@ -643,6 +643,7 @@ function openModalPreview(src) {
 	$.fancybox.open({
 		src: src,
 		type: 'ajax',
+		touch: false,
 		opts: {
 			afterLoad : function() {
 				initModalSliders();
