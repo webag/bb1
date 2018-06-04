@@ -260,6 +260,14 @@
 			}
 		}
 	}
+
+	&.opened{
+		.top-basket{
+			visibility: visible;
+			opacity: 1;
+			transform: none;
+		}
+	}
 }
 
 .top-basket{
@@ -282,12 +290,6 @@
 	@include res(s){
 		width: 290px;
 		padding: 20px 10px;
-	}
-
-	&.opened{
-		visibility: visible;
-		opacity: 1;
-		transform: none;
 	}
 
 	.btn{

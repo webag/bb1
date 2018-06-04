@@ -329,14 +329,14 @@ $(function(){
 Top basket BEGIN
 ***********************/
 function openTopBasket() {
-	var topBasket = $('.top-basket');
+	var topBasket = $('.top-panel-basket');
 	var btnBasket = $('.top-btn--basket');
 	btnBasket.addClass('active');
 	topBasket.addClass('opened');
 }
 
 function closeTopBasket() {
-	var topBasket = $('.top-basket');
+	var topBasket = $('.top-panel-basket');
 	var btnBasket = $('.top-btn--basket');
 	btnBasket.removeClass('active');
 	topBasket.removeClass('opened');
