@@ -232,7 +232,7 @@ $(function($){
 	var timer2;
 	var delay = 150;
 
-	$('[data-sub]').on('pointerenter touchstart',function () {
+	$('[data-sub]').on('mouseenter touchstart',function () {
 		var id = $(this).data('sub');
 		timer = setTimeout(function() {
 			closeSubMenu();
@@ -240,19 +240,19 @@ $(function($){
 		}, delay);
 	});
 
-	$('.s-menu').on('pointerleave',function () {
+	$('.s-menu').on('mouseleave',function () {
 		clearTimeout(timer);
 		setTimeout(function() {
 			closeSubMenu();
 		}, delay);
 	});
 
-	$('.top-menu-panel').on('pointerenter touchstart',function () {
+	$('.top-menu-panel').on('mouseenter touchstart',function () {
 		clearTimeout(timer);
 		clearTimeout(timer2);
 	});
 
-	$('.top-menu li').not('[data-sub]').on('pointerenter touchstart',function () {
+	$('.top-menu li').not('[data-sub]').on('mouseenter touchstart',function () {
 		timer2 = setTimeout(function() {
 			closeSubMenu();
 		}, delay);
