@@ -327,3 +327,42 @@
 	}
 }
 //filter-block
+
+
+//catalog-big-banner
+.catalog-big-banner{
+	position: relative;
+	margin-bottom: 10px;
+
+	@include res(l){
+		margin-top: 10px;
+	}
+
+	&--cropped{
+		height: 0;
+		padding-bottom: 43%;
+		overflow: hidden;
+		@include res(xl){
+			padding-bottom: 43.7%;
+		}
+
+		.catalog-big-banner__video{
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+	}
+}
+
+.catalog-big-banner__img{
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.catalog-big-banner__video{
+	width: 100%;
+	height: auto;
+}
+//catalog-big-banner
