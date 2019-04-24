@@ -223,9 +223,9 @@
 			<!--main-->
 			<div class="grid-9 grid-12_l catalog-main">
 				<!--catalog-big-banner--cropped-->
-				<div class="catalog-big-banner catalog-big-banner--cropped">
+				<div class="catalog-big-banner">
 					<!--<img src="/img/catalog/big-banner.jpg" alt="1" class="catalog-big-banner__img">-->
-					<video src="/img/catalog/belts.mp4" autoplay muted loop class="catalog-big-banner__video"></video>
+					<video src="/img/catalog/belts.mp4" autoplay muted loop playsinline class="catalog-big-banner__video"></video>
 				</div>
 				<div class="row">
 					<div class="grid-4 grid-6_s">
