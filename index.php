@@ -3,6 +3,19 @@
 
 <section class="s-home-slider">
 	<div class="home-slide" style="background-image: url('/img/home/slide.jpg')">
+		<div class="home-slide__video">
+			<video loop muted data-src="/img/video/video.m4v">
+				<source src="" type="video/mp4">
+			</video>
+		</div>
+		<div class="container">
+			<div class="home-slide__content">
+				<a href="#" class="home-slide__title">NEW COLLECTION</a>
+				<p class="home-slide__descr text-big">Новая коллекция ремней BB1</p>
+			</div>
+		</div>
+	</div>
+	<div class="home-slide" style="background-image: url('/img/home/slide.jpg')">
 		<div class="container">
 			<div class="home-slide__content">
 				<a href="#" class="home-slide__title">NEW COLLECTION</a>
@@ -19,6 +32,58 @@
 		</div>
 	</div>
 </section>
+
+<script>
+	const introVideos = document.querySelectorAll('.s-home-slider video');
+	const introVideoCheck = function(video) {
+		if (window.matchMedia("(max-width: 1025px)").matches) {
+			if (document.body.contains(video)) {
+				video.parentNode.removeChild(video);
+			}
+		} else {
+			if (document.body.contains(video)){
+				const videoSrc = video.getAttribute('data-src');
+				const videoSource = video.querySelector('source');
+				videoSource.setAttribute('src',videoSrc);
+				video.load();
+			}
+		}
+	};
+	introVideos.forEach(video => {
+		introVideoCheck(video)
+	});
+</script>
+
+
+<section class="s-home-second">
+	<div class="second-slider">
+		<div class="second-slider__slide">
+			<div class="home-slide__video">
+				<video loop muted>
+					<source src="/img/video/video.m4v" type="video/mp4">
+				</video>
+			</div>
+			<img src="/img/home/second-1.jpg" alt="1">
+		</div>
+		<div class="second-slider__slide">
+			<img src="/img/home/second-1.jpg" alt="1">
+		</div>
+	</div>
+</section>
+<script>
+	const introVideos2 = document.querySelectorAll('.second-slider video');
+	const introVideoCheck2 = function(video) {
+		if (window.matchMedia("(max-width: 1025px)").matches) {
+			if (document.body.contains(video)) {
+				video.parentNode.removeChild(video);
+			}
+		}
+	};
+	introVideos2.forEach(video => {
+		introVideoCheck2(video)
+	});
+</script>
+
 
 
 <section class="s-home-promos">
@@ -70,6 +135,9 @@
 			</div>
 			<div class="promo-full__img">
 				<img src="/img/home/promo-3.jpg" alt="650x825">
+				<video loop muted>
+					<source src="/img/video/video.m4v" type="video/mp4">
+				</video>
 			</div>
 		</div>
 

@@ -1,6 +1,6 @@
 //s-home-slider
 .s-home-slider{
-	height: 575px;
+	height: 700px;
 	overflow: hidden;
 	@include note{
 		height: 460px;
@@ -20,12 +20,14 @@
 }
 
 .home-slide{
-	height: 575px;
+	height: 700px;
 	background-color: $black;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
 	color: #FFF;
+	overflow: hidden;
+	position: relative;
 	@include note{
 		height: 460px;
 	}
@@ -102,6 +104,24 @@
 }
 
 
+.home-slide__video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	object-fit: cover;
+
+	video{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 100%;
+	}
+}
+
+
 .slick-dots{
 	position: absolute;
 	bottom: 12px;
@@ -151,6 +171,78 @@
 }
 //s-home-slider
 
+
+//s-home-second
+.s-home-second{
+	padding: 40px 0 100px 0;
+}
+
+.second-slider{
+	width: 1670px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+
+	.slick-dots{
+		bottom: -40px;
+
+		li{
+			width: 80px;
+			height: 2px;
+			border-radius: 0;
+			border: none;
+			background: #d2d2d2;
+			@include res(s){
+				width: 40px;
+			}
+
+			&:after{
+				display: none;
+			}
+			
+			&.slick-active{
+				background: #000;
+			}
+		}
+	}
+}
+
+.second-slider__slide{
+	display: block;
+	width: 100%;
+	position: relative;
+
+	&:focus{
+		outline: none;
+	}
+
+	img{
+		display: block;
+		width: 100%;
+		height: auto;
+		position: relative;
+		z-index: 1;
+	}
+
+	.home-slide__video{
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: cover;
+
+		video{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: 100%;
+		}
+	}
+}
+//s-home-second
 
 
 //s-home-promos
@@ -356,6 +448,7 @@
 
 	&__img{
 		width: 55.1%;
+		position: relative;
 		@include note{
 			width: 50%;
 			padding-left: 15px;
@@ -374,6 +467,19 @@
 			height: auto;
 			@include note{
 				max-width: 530px;
+			}
+		}
+
+		video{
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include res(l){
+				display: none;
 			}
 		}
 	}

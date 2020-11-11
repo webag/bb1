@@ -1,6 +1,6 @@
 .s-footer{
-	background: $black;
-	color: #FFF;
+	background: #e2e2e2;
+	color: #000;
 	padding: 35px 0 55px 0;
 	@include res(xl){
 		padding: 25px 0 30px 0;
@@ -238,3 +238,54 @@
 	}
 }
 //s-subscribe
+
+
+.footer-socs{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+	width: 120px;
+	@include res(s){
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+
+//site-bottom
+.site-bottom{
+	padding: 5px 0;
+	@include res(m){
+		padding: 10px 0;
+	}
+
+	.container{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include res(m){
+			flex-direction: column;
+		}
+	}
+
+	img{
+		margin-right: 140px;
+		@include res(l){
+			margin-right: 40px;
+		}
+		@include res(m){
+			margin-right: 0;
+			margin-bottom: 10px;
+			width: 180px;
+			height: auto;
+		}
+	}
+
+	span{
+		font-size: 18px;
+		@include res(m){
+			font-size: 14px;
+		}
+	}
+}
+//site-bottom

@@ -105,6 +105,7 @@ function init_fancy() {
 		selector: '.fancy-gal',
 		backFocus: false,
 		buttons: ['close'],
+		smallBtn: true,
 		thumbs: {
 			autoStart: true,
 			axis: "x"
@@ -408,7 +409,6 @@ Top user END
  ***********************/
 
 
-
 /***********************
 Home slider BEGIN
 ***********************/
@@ -416,12 +416,44 @@ $(function($){
 	$('.s-home-slider').slick({
 		infinite: true,
 		arrows: false,
-		dots: true
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		speed: 1000
 	});
 });
 /***********************
 Home slider END
 ***********************/
+
+
+/***********************
+Home slider BEGIN
+ ***********************/
+$(function($){
+	$('.s-home-slider').slick({
+		infinite: true,
+		arrows: false,
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		speed: 1000
+	});
+});
+/***********************
+Home slider END
+ ***********************/
+
+
+/* Second slider BEGIN */
+$(function($){
+	$('.second-slider').slick({
+		infinite: false,
+		arrows: false,
+		dots: true
+	});
+});
+/* Second slider END */
 
 
 /***********************
@@ -533,7 +565,7 @@ function initProductSliders() {
 
 
 $(function($){
-	initProductSliders();
+	//initProductSliders();
 
 	var relatedNavBtns = $('.related-nav button');
 	var relatedTabs = $('.related-tab');
@@ -643,7 +675,6 @@ function openModalPreview(src) {
 	$.fancybox.open({
 		src: src,
 		type: 'ajax',
-		touch: false,
 		opts: {
 			afterLoad : function() {
 				initModalSliders();
@@ -658,15 +689,6 @@ function openModalPreview(src) {
 		}
 	});
 }
-
-window.addEventListener("orientationchange", function() {
-	var modalSliders = $('.modal-slider-small,.modal-slider-big');
-	modalSliders.removeClass('modal-ready');
-	setTimeout(function () {
-		modalSliders.slick('setPosition');
-		modalSliders.addClass('modal-ready');
-	},2000);
-});
 
 $(function($){
 	$(document).on('click','[data-preview]',function (e) {
@@ -710,15 +732,27 @@ try {
  ***********************/
 
 
-/***********************
- Прокрутка к секциям BEGIN
- ***********************/
-$(function () {
-	$('.catalog-aside__to-top').on('click', function () {
-		$('html,body').stop().animate({scrollTop: 0}, 1000);
-		return false;
+/* Video intersections BEGIN */
+document.addEventListener("DOMContentLoaded", function (event) {
+	const videos = document.querySelectorAll("video");
+	const config = {
+		rootMargin: '0px -100px',
+		threshold: 0
+	}
+	const callback = (entries) => {
+		entries.forEach(entry => {
+			if (!entry.isIntersecting) {
+				entry.target.pause();
+			} else {
+				entry.target.play();
+			}
+		});
+	}
+
+	const observer = new IntersectionObserver(callback, config);
+
+	videos.forEach(element => {
+		observer.observe(element);
 	});
 });
-/***********************
- Прокрутка к секциям END
- ***********************/
+/* Video intersections END */
