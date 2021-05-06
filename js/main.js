@@ -450,7 +450,10 @@ $(function($){
 	$('.second-slider').slick({
 		infinite: false,
 		arrows: false,
-		dots: true
+		dots: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		speed: 1000
 	});
 });
 /* Second slider END */
@@ -756,3 +759,112 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	});
 });
 /* Video intersections END */
+
+
+/* Cursor BEGIN */
+function Cursor(t) {
+	this.cursor = t,
+	this.mouseX = 0,
+	this.mouseY = 0,
+	this.prevMouseX = 0,
+	this.prevMouseY = 0,
+	this.assets = ["butterfly1.png", "butterfly2.png", "butterfly3.png", "butterfly4.png", "butterfly5.png", "butterfly6.png"],
+	this.obCount = 0,
+	this.$container = $(".cursor"),
+	this.adding = !1,
+	this.timer = 50,
+	this.touchInt = null,
+	this.init()
+}
+
+$(document).ready(function() {
+	let cursorAnimation = new Cursor;
+})
+	Cursor.prototype.init = function() {
+		$(window).on("mousemove", $.proxy(this.onMouseMove, this));
+		$(window).on("touchmove", $.proxy(this.onTouchMove, this));
+	}
+
+	Cursor.prototype.onMouseMove = function(t) {
+		this.mouseX = t.clientX;
+		this.mouseY = t.clientY;
+		this.addGraphic(this.mouseX, this.mouseY, !1);
+	}
+
+	Cursor.prototype.onTouchMove = function(t) {
+		let e = t.originalEvent.touches[0];
+		this.mouseX = e.clientX,
+			this.mouseY = e.clientY,
+			this.addGraphic(this.mouseX, this.mouseY, !1)
+	}
+
+	Cursor.prototype.onTouchStart = function(t) {
+		let e = t.originalEvent.touches[0];
+		this.mouseX = e.clientX;
+		this.mouseY = e.clientY;
+		for (let n = 0; n < 10; n++) {
+			setTimeout($.proxy(this.addGraphic, this, this.mouseX + n, this.mouseY + n, !0), .2 * n);
+		}
+
+	}
+
+	Cursor.prototype.onTouchEnd = function(t) {
+		clearInterval(this.touchInt);
+	}
+
+	Cursor.prototype.addGraphic = function(t, e, n) {
+		let i, r, o, s, a, l, c, u, h;
+		this.adding || (this.obCount = this.obCount + 1,
+			i = this.getRandomInt(0, this.assets.length - 1),
+			r = '<img id="ob' + this.obCount + '" class="cursor__object" src="/bitrix/templates/bb1/img/birds/' + this.assets[i] + '">',
+			this.$container.append(r),
+			o = $("#ob" + this.obCount),
+			s = n ? 50 : 20,
+			newXPos = t - 20 + this.getRandomInt(-s, s),
+			newYPos = e - 20 + this.getRandomInt(-s, s),
+			l = !0 !== n ? (a = this.prevMouseX - t,
+			this.prevMouseY - e) : (a = t - newXPos,
+			e - newYPos),
+			c = 180 * Math.atan2(l, a) / Math.PI - 90,
+			u = this.getRandomArbitrary(.2, .8),
+			TweenMax.set(o, {
+				rotation: c,
+				x: newXPos,
+				y: newYPos,
+				scale: 0
+			}),
+			(h = new TimelineMax).to(o, {
+				scale: u,
+				duration: this.getRandomArbitrary(.7, 1.2),
+				ease: Power1.easeOut
+			}),
+			h.to(o, {
+				scale: 0,
+				duration: this.getRandomArbitrary(.5, 1),
+				onCompleteParams: [o],
+				ease: Power1.easeIn,
+				onComplete: function(t) {
+					t.remove()
+				}
+			}),
+		!0 !== n && (this.adding = !0,
+			setTimeout($.proxy(this.reset, this), this.timer),
+			this.prevMouseX = t,
+			this.prevMouseY = e))
+	}
+
+	Cursor.prototype.reset = function(t, e) {
+		this.adding = !1
+	}
+
+	Cursor.prototype.getRandomInt = function(t, e) {
+		return t = Math.ceil(t),
+			e = Math.floor(e),
+		Math.floor(Math.random() * (e - t + 1)) + t
+	}
+
+	Cursor.prototype.getRandomArbitrary = function(t, e) {
+		return Math.random() * (e - t) + t
+	}
+;
+/* Cursor END */

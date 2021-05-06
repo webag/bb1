@@ -26,20 +26,20 @@
 
 	img{
 		display: block;
-		width: 150px;
+		width: auto;
 		transition: opacity 0.3s ease;
 		transform: translate3d(0,0,0);
 		@include res(xl){
-			width: 124px;
+			width: auto;
 		}
 		@include res(s){
-			width: 100px;
+			width: auto;
 		}
 		@include res(xs){
-			width: 75px;
+			width: auto;
 		}
 		@media (max-height: 700px) and (min-width: 1025px){
-			width: 100px;
+			width: auto;
 		}
 
 		&:hover{
