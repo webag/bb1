@@ -768,11 +768,11 @@ function Cursor(t) {
 	this.mouseY = 0,
 	this.prevMouseX = 0,
 	this.prevMouseY = 0,
-	this.assets = ["butterfly1.png", "butterfly2.png", "butterfly3.png", "butterfly4.png", "butterfly5.png", "butterfly6.png"],
+	this.assets = ["butterfly1.png", "butterfly2.png", "butterfly3.png", "butterfly4.png", "butterfly5.png", "butterfly6.png", "butterfly7.png"],
 	this.obCount = 0,
 	this.$container = $(".cursor"),
 	this.adding = !1,
-	this.timer = 50,
+	this.timer = 150,
 	this.touchInt = null,
 	this.init()
 }
@@ -828,7 +828,7 @@ $(document).ready(function() {
 			c = 180 * Math.atan2(l, a) / Math.PI - 90,
 			u = this.getRandomArbitrary(.2, .8),
 			TweenMax.set(o, {
-				rotation: c,
+				// rotation: c,
 				x: newXPos,
 				y: newYPos,
 				scale: 0
