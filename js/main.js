@@ -737,7 +737,9 @@ try {
 
 /* Video intersections BEGIN */
 document.addEventListener("DOMContentLoaded", function (event) {
-	const videos = document.querySelectorAll("video");
+	const videos1 = document.querySelectorAll(".s-home-slider video");
+	const videos2 = document.querySelectorAll(".second-slider video");
+	const videos3 = document.querySelectorAll(".product-slider-big video");
 	const config = {
 		rootMargin: '0px -100px',
 		threshold: 0
@@ -754,7 +756,13 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 	const observer = new IntersectionObserver(callback, config);
 
-	videos.forEach(element => {
+	videos1.forEach(element => {
+		observer.observe(element);
+	});
+	videos2.forEach(element => {
+		observer.observe(element);
+	});
+	videos3.forEach(element => {
 		observer.observe(element);
 	});
 });
@@ -778,7 +786,9 @@ function Cursor(t) {
 }
 
 $(document).ready(function() {
-	let cursorAnimation = new Cursor;
+	if ($('.cursor').length){
+		let cursorAnimation = new Cursor;
+	}
 })
 	Cursor.prototype.init = function() {
 		$(window).on("mousemove", $.proxy(this.onMouseMove, this));

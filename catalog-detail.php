@@ -10,19 +10,35 @@
 					<div class="product-sliders__thumbs">
 						<div class="product-slider-small vertical-arrows">
 							<div class="product-slider-small__item">
-								<img src="/img/catalog-detail/small.jpg" alt="s">
+								<img src="/img/catalog-detail/big.jpg" alt="s">
 							</div>
 							<div class="product-slider-small__item">
-								<img src="/img/catalog-detail/small-2.jpg" alt="s">
+								<video src="/img/catalog-detail/video.mp4"></video>
+								<div class="product-slider-small__item__play">
+									<svg x="0px" y="0px" viewBox="0 0 320.001 320.001">
+										<path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288 c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144 c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+									</svg>
+								</div>
 							</div>
 							<div class="product-slider-small__item">
-								<img src="/img/catalog-detail/small-3.jpg" alt="s">
+								<video src="/img/catalog-detail/video.mp4"></video>
+								<div class="product-slider-small__item__play">
+									<svg x="0px" y="0px" viewBox="0 0 320.001 320.001">
+										<path d="M295.84,146.049l-256-144c-4.96-2.784-11.008-2.72-15.904,0.128C19.008,5.057,16,10.305,16,16.001v288 c0,5.696,3.008,10.944,7.936,13.824c2.496,1.44,5.28,2.176,8.064,2.176c2.688,0,5.408-0.672,7.84-2.048l256-144 c5.024-2.848,8.16-8.16,8.16-13.952S300.864,148.897,295.84,146.049z"/>
+									</svg>
+								</div>
 							</div>
 							<div class="product-slider-small__item">
-								<img src="/img/catalog-detail/small-4.jpg" alt="s">
+								<img src="/img/catalog-detail/big-2.jpg" alt="s">
 							</div>
 							<div class="product-slider-small__item">
-								<img src="/img/catalog-detail/small-2.jpg" alt="s">
+								<img src="/img/catalog-detail/big.jpg" alt="s">
+							</div>
+							<div class="product-slider-small__item">
+								<img src="/img/catalog-detail/big-2.jpg" alt="s">
+							</div>
+							<div class="product-slider-small__item">
+								<img src="/img/catalog-detail/big.jpg" alt="s">
 							</div>
 						</div>
 					</div>
@@ -31,14 +47,20 @@
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
 								<img src="/img/catalog-detail/big.jpg" alt="s">
 							</a>
+							<a href="/img/catalog-detail/video.mp4" class="product-slider-big__item" data-fancybox data-width="900" data-height="1126">
+								<video src="/img/catalog-detail/video.mp4" loop autoplay></video>
+							</a>
+							<a href="/img/catalog-detail/video.mp4" class="product-slider-big__item" data-fancybox data-width="900" data-height="1126">
+								<video src="/img/catalog-detail/video.mp4" loop autoplay></video>
+							</a>
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
-								<img src="/img/catalog-detail/big.jpg" alt="s">
+								<img src="/img/catalog-detail/big-2.jpg" alt="s">
 							</a>
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
 								<img src="/img/catalog-detail/big.jpg" alt="s">
 							</a>
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
-								<img src="/img/catalog-detail/big.jpg" alt="s">
+								<img src="/img/catalog-detail/big-2.jpg" alt="s">
 							</a>
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
 								<img src="/img/catalog-detail/big.jpg" alt="s">
