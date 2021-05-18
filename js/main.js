@@ -568,7 +568,7 @@ function initProductSliders() {
 
 
 $(function($){
-	//initProductSliders();
+	// initProductSliders();
 
 	var relatedNavBtns = $('.related-nav button');
 	var relatedTabs = $('.related-tab');
@@ -740,7 +740,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	const videos1 = document.querySelectorAll(".s-home-slider video");
 	const videos2 = document.querySelectorAll(".second-slider video");
 	const videos3 = document.querySelectorAll(".promo-full__img video");
-	const videos4 = document.querySelectorAll(".product-slider-big video");
+	const videos4 = document.querySelectorAll(".product-slider-small video");
+	const videos5 = document.querySelectorAll(".product-slider-big video");
 	const config = {
 		rootMargin: '0px -100px',
 		threshold: 0
@@ -767,6 +768,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 		observer.observe(element);
 	});
 	videos4.forEach(element => {
+		observer.observe(element);
+	});
+	videos5.forEach(element => {
 		observer.observe(element);
 	});
 });
