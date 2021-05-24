@@ -105,7 +105,7 @@ function init_fancy() {
 		selector: '.fancy-gal',
 		backFocus: false,
 		buttons: ['close'],
-		smallBtn: true,
+		smallBtn: false,
 		thumbs: {
 			autoStart: true,
 			axis: "x"

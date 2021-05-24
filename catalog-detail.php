@@ -47,10 +47,10 @@
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
 								<img src="/img/catalog-detail/big.jpg" alt="s">
 							</a>
-							<a href="/img/catalog-detail/video.mp4" class="product-slider-big__item" data-fancybox data-width="900" data-height="1126">
+							<a href="/img/catalog-detail/video.mp4" class="fancy-gal product-slider-big__item" data-fancybox="product-id" data-width="900" data-height="1126" data-thumb="/img/catalog-detail/big.jpg">
 								<video src="/img/catalog-detail/video.mp4" loop autoplay muted></video>
 							</a>
-							<a href="/img/catalog-detail/video.mp4" class="product-slider-big__item" data-fancybox data-width="900" data-height="1126">
+							<a href="/img/catalog-detail/video.mp4" class="fancy-gal product-slider-big__item" data-fancybox="product-id" data-width="900" data-height="1126" data-thumb="/img/catalog-detail/big.jpg">
 								<video src="/img/catalog-detail/video.mp4" loop autoplay muted></video>
 							</a>
 							<a href="/img/catalog-detail/big.jpg" class="fancy-gal product-slider-big__item" data-fancybox="product-id">
