@@ -196,6 +196,10 @@
 //modal-subscribe
 .modal-subscribe{
 	width: 970px;
+	border-left: 10px solid #f1acac;
+	@include res(s){
+		border-left: 5px solid #f1acac;
+	}
 }
 
 .modal-subscribe__img{
