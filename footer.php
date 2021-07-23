@@ -103,6 +103,31 @@
 		<p>Если постоянно видите эту ошибку, пожалуйста, обратитесь к администратору сайта. Мы будем очень благодарны.</p>
 	</div>
 
+	<div id="modal-subscribe" class="modal modal-subscribe">
+		<div class="row">
+			<div class="grid-5 grid-12_s">
+				<img src="/img/modals/subscr.jpg" alt="1" class="modal-subscribe__img">
+			</div>
+			<div class="grid-7 grid-12_s">
+				<img src="/img/modals/bird.png" alt="1">
+				<div class="h3 modal-subscribe__title">Подпишись на нашу рассылку и получи скидку 10% на первый заказ</div>
+				<div class="modal-subscribe__descr">Получай специальные скидки и ранний доступ к специальным предложениям, новым коллекциям и актуальным трендам.</div>
+				<form class="modal-subscribe__form">
+					<label class="form-group">
+						<span class="form-group__label">ФИО:</span>
+						<input type="text" name="xxx" class="text-input">
+					</label>
+					<label class="form-group">
+						<span class="form-group__label">E-MAIL:</span>
+						<input type="email" name="xxx" class="text-input">
+					</label>
+					<div class="form-note">Подписываясь на эту рассылку, вы соглашаетесь с Условиями пользования и Политикой конфиденциальности. Чтобы отменить подписку, нажмите на кнопку «Отписаться» в конце любого письма.</div>
+					<button type="submit" class="btn">Отправить</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
 </div>
 <!-- Модальные окна -->
 

@@ -43,6 +43,10 @@
 	border-top-color: #fff;
 }
 
+.fancybox-container{
+	font-family: $font;
+}
+
 
 //modal-cities
 .modal-cities{
@@ -187,3 +191,35 @@
 	}
 }
 //modal-preview
+
+
+//modal-subscribe
+.modal-subscribe{
+	width: 970px;
+}
+
+.modal-subscribe__img{
+	display: block;
+	max-width: 100%;
+	@include res(s){
+		display: none;
+	}
+}
+
+.modal-subscribe__title{
+	margin-bottom: 10px;
+}
+
+.modal-subscribe__descr{
+	margin-bottom: 10px;
+}
+
+.modal-subscribe__form{
+	.form-group{
+		margin-bottom: 15px;
+	}
+	.form-note{
+		margin-bottom: 15px;
+	}
+}
+//modal-subscribe
