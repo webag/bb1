@@ -320,6 +320,15 @@ $(function(){
 		$('.mob-menu .i-right-ar').not(self).removeClass('active');
 		self.toggleClass('active');
 	})
+
+
+	$('.has-level-3 span').on('click',function () {
+		var self = $(this);
+		var thisSub = self.next('.mob-menu-level-3');
+
+		$('.mob-menu-level-3').not(thisSub).slideUp();
+		thisSub.slideToggle();
+	})
 });
 /***********************
  Mob menu END
@@ -418,25 +427,7 @@ $(function($){
 		arrows: false,
 		dots: true,
 		autoplay: true,
-		autoplaySpeed: 5000,
-		speed: 1000
-	});
-});
-/***********************
-Home slider END
-***********************/
-
-
-/***********************
-Home slider BEGIN
- ***********************/
-$(function($){
-	$('.s-home-slider').slick({
-		infinite: true,
-		arrows: false,
-		dots: true,
-		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 27000,
 		speed: 1000
 	});
 });
