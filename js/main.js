@@ -53,9 +53,9 @@ $(function () {
 					console.log(response);
 					$.fancybox.close();
 					if (response["MAILER_ERROR"] !== undefined) {
-						$.fancybox.open({src: '#modal-error'});
+						$.fancybox.open({ src: '#modal-error' });
 					} else {
-						$.fancybox.open({src: '#modal-thanks'});
+						$.fancybox.open({ src: '#modal-thanks' });
 						setTimeout(function () {
 							$.fancybox.close();
 						}, 4500);
@@ -144,7 +144,7 @@ $(function () {
 	$('.scrollto').on('click', function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
-		$('html,body').stop().animate({scrollTop: destination}, 1000);
+		$('html,body').stop().animate({ scrollTop: destination }, 1000);
 		return false;
 	});
 });
@@ -179,7 +179,7 @@ function openSearch() {
 	searchForm.addClass('opened');
 	setTimeout(function () {
 		input.eq(0).focus();
-	},300);
+	}, 300);
 }
 
 function closeSearch() {
@@ -189,17 +189,17 @@ function closeSearch() {
 	btnSearch.removeClass('active');
 }
 
-$(function($){
-	$('.top-btn--search').on('click',function () {
+$(function ($) {
+	$('.top-btn--search').on('click', function () {
 		var searchForm = $('.top-panel-search__form');
-		if (searchForm.hasClass('opened')){
+		if (searchForm.hasClass('opened')) {
 			closeSearch();
 		} else {
 			openSearch();
 		}
 	});
 
-	$(document).on('mouseup touchstart',function (e){
+	$(document).on('mouseup touchstart', function (e) {
 		var searchForm = $(".top-panel-search");
 		if (!searchForm.is(e.target) && searchForm.has(e.target).length === 0) {
 			closeSearch()
@@ -214,12 +214,12 @@ Top search interactions END
 /***********************
 top-menu BEGIN
 ***********************/
-$(function($){
+$(function ($) {
 
 	function openSubMenu(id) {
-		var self = $('[data-sub='+id+']');
+		var self = $('[data-sub=' + id + ']');
 		self.addClass('active');
-		$('#'+id).addClass('active');
+		$('#' + id).addClass('active');
 		$('.top-menu-panel').addClass('active');
 	}
 
@@ -233,39 +233,56 @@ $(function($){
 	var timer2;
 	var delay = 150;
 
-	$('[data-sub]').on('mouseenter touchstart',function () {
+	$('[data-sub]').on('mouseenter touchstart', function () {
 		var id = $(this).data('sub');
-		timer = setTimeout(function() {
+		timer = setTimeout(function () {
 			closeSubMenu();
 			openSubMenu(id);
 		}, delay);
 	});
 
-	$('.s-menu').on('mouseleave',function () {
+	$('.s-menu').on('mouseleave', function () {
 		clearTimeout(timer);
-		setTimeout(function() {
+		setTimeout(function () {
 			closeSubMenu();
 		}, delay);
 	});
 
-	$('.top-menu-panel').on('mouseenter touchstart',function () {
+	$('.top-menu-panel').on('mouseenter touchstart', function () {
 		clearTimeout(timer);
 		clearTimeout(timer2);
 	});
 
-	$('.top-menu li').not('[data-sub]').on('mouseenter touchstart',function () {
-		timer2 = setTimeout(function() {
+	$('.top-menu li').not('[data-sub]').on('mouseenter touchstart', function () {
+		timer2 = setTimeout(function () {
 			closeSubMenu();
 		}, delay);
 		clearTimeout(timer);
 	});
 
-	$(document).on('mouseup touchstart',function (e){
+	$(document).on('mouseup touchstart', function (e) {
 		var searchForm = $(".s-menu");
 		if (!searchForm.is(e.target) && searchForm.has(e.target).length === 0) {
 			closeSubMenu();
 			clearTimeout(timer);
 		}
+	});
+
+	$('[data-level-3]').on('mouseenter touchstart', function () {
+		var self = $(this);
+		var id = self.data('level-3');
+		const parent = self.parents('.top-menu-sub');
+		parent.find('[data-level-3]').removeClass('active');
+		self.addClass('active');
+		parent.find('.level-3-list').removeClass('active');
+		$('#' + id).addClass('active');
+	});
+
+	$('.level-2-list a').on('mouseenter touchstart', function () {
+		
+			$('[data-level-3]').removeClass('active');
+			$('.level-3-list').removeClass('active');
+
 	});
 });
 /***********************
@@ -276,7 +293,7 @@ top-menu END
 /***********************
 Fixed header BEGIN
 ***********************/
-$(function($){
+$(function ($) {
 	var topPanelHeight = $('.s-top-panel').outerHeight();
 	var menu = $('.s-menu__fixed');
 
@@ -296,21 +313,21 @@ Fixed header END
 /***********************
  Mob menu BEGIN
  ***********************/
-$(function(){
-	$('.burger').on('click',function () {
+$(function () {
+	$('.burger').on('click', function () {
 		$(this).toggleClass('active');
 		$('.s-mob-panel').toggleClass('active');
 	});
 
-	$(document).on('click touchstart',function (e){
+	$(document).on('click touchstart', function (e) {
 		var div = $(".s-mob-panel,.burger");
-		if (!div.is(e.target) && div.has(e.target).length === 0){
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
 			$('.burger').removeClass('active');
 			$('.s-mob-panel').removeClass('active');
 		}
 	});
 
-	$('.mob-menu figure').on('click',function () {
+	$('.mob-menu figure').on('click', function () {
 		var self = $(this);
 		var thisSub = self.next('.mob-menu-sub');
 
@@ -322,7 +339,7 @@ $(function(){
 	})
 
 
-	$('.has-level-3 span').on('click',function () {
+	$('.has-level-3 span').on('click', function () {
 		var self = $(this);
 		var thisSub = self.next('.mob-menu-level-3');
 
@@ -352,12 +369,13 @@ function closeTopBasket() {
 	topBasket.removeClass('opened');
 }
 
-$(function($){
-	$('.add_to_cart').on('click',function () {
+$(function ($) {
+	$('.add_to_cart').on('click', function () {
 		var topBasket = $('.top-basket');
 		openTopBasket();
-		setTimeout(function(){
-			closeTopBasket();},
+		setTimeout(function () {
+			closeTopBasket();
+		},
 			2000);
 
 		/*if (topBasket.hasClass('opened')){
@@ -367,7 +385,7 @@ $(function($){
 		}*/
 	});
 
-	$(document).on('mouseup touchstart',function (e){
+	$(document).on('mouseup touchstart', function (e) {
 		var topBasket = $(".top-panel-basket");
 		if (!topBasket.is(e.target) && topBasket.has(e.target).length === 0) {
 			closeTopBasket()
@@ -396,17 +414,17 @@ function closeLogin() {
 	topLogin.removeClass('opened');
 }
 
-$(function($){
-	$('.top-btn--user').on('click',function () {
+$(function ($) {
+	$('.top-btn--user').on('click', function () {
 		var topLogin = $('.s-login');
-		if (topLogin.hasClass('opened')){
+		if (topLogin.hasClass('opened')) {
 			closeLogin();
 		} else {
 			openLogin();
 		}
 	});
 
-	$(document).on('mouseup touchstart',function (e){
+	$(document).on('mouseup touchstart', function (e) {
 		var topBasket = $(".s-login,.top-btn--user");
 		if (!topBasket.is(e.target) && topBasket.has(e.target).length === 0) {
 			closeLogin();
@@ -421,7 +439,7 @@ Top user END
 /***********************
 Home slider BEGIN
 ***********************/
-$(function($){
+$(function ($) {
 	$('.s-home-slider').slick({
 		infinite: true,
 		arrows: false,
@@ -437,7 +455,7 @@ Home slider END
 
 
 /* Second slider BEGIN */
-$(function($){
+$(function ($) {
 	$('.second-slider').slick({
 		infinite: false,
 		arrows: false,
@@ -453,7 +471,7 @@ $(function($){
 /***********************
  Nice select BEGIN
  ***********************/
-$(function($){
+$(function ($) {
 	$('.select-style').niceSelect();
 });
 /***********************
@@ -464,7 +482,7 @@ $(function($){
 /***********************
 Catalog BEGIN
 ***********************/
-$(function($){
+$(function ($) {
 	var btnFilterOpen = $('.mob-open-filter');
 	var filterPanel = $('.filter-block');
 	var filterPanelClose = $('.filter-block-close');
@@ -480,28 +498,28 @@ $(function($){
 		filterPanelClose.addClass('visible');
 	}
 
-	btnFilterOpen.on('click',function () {
+	btnFilterOpen.on('click', function () {
 		openMobFilter();
 	});
 
-	filterPanelClose.on('click',function () {
+	filterPanelClose.on('click', function () {
 		closeMobFilter();
 	});
 
-	$(document).on('click touchstart',function (e){
+	$(document).on('click touchstart', function (e) {
 		var div = $(".mob-open-filter,.filter-block,.filter-block-close");
-		if (!div.is(e.target) && div.has(e.target).length === 0){
+		if (!div.is(e.target) && div.has(e.target).length === 0) {
 			closeMobFilter();
 		}
 	});
 
 
-	$('.filter__title').on('click',function (e) {
+	$('.filter__title').on('click', function (e) {
 		e.preventDefault();
 		var thisTitle = $(this);
 		var thisFilter = thisTitle.parents('.filter');
 		var thisValues = thisFilter.find('.filter__values');
-		if (thisFilter.hasClass('opened')){
+		if (thisFilter.hasClass('opened')) {
 			thisValues.slideUp(function () {
 				thisFilter.removeClass('opened');
 			});
@@ -558,7 +576,7 @@ function initProductSliders() {
 }
 
 
-$(function($){
+$(function ($) {
 	// initProductSliders();
 
 	var relatedNavBtns = $('.related-nav button');
@@ -571,7 +589,7 @@ $(function($){
 		relatedTabs.eq(index).addClass('active');
 	}
 
-	relatedNavBtns.on('click',function () {
+	relatedNavBtns.on('click', function () {
 		var index = $(this).index();
 		selectRelatedTab(index);
 		$('.related-slider').slick('setPosition');
@@ -670,12 +688,12 @@ function openModalPreview(src) {
 		src: src,
 		type: 'ajax',
 		opts: {
-			afterLoad : function() {
+			afterLoad: function () {
 				initModalSliders();
 			},
-			afterShow : function() {
+			afterShow: function () {
 				$('.modal-slider-small,.modal-slider-big').imagesLoaded({},
-					function() {
+					function () {
 						updateModalSliders();
 					}
 				);
@@ -684,8 +702,8 @@ function openModalPreview(src) {
 	});
 }
 
-$(function($){
-	$(document).on('click','[data-preview]',function (e) {
+$(function ($) {
+	$(document).on('click', '[data-preview]', function (e) {
 		e.preventDefault();
 		var productId = $(this).data('preview');
 		openModalPreview('/preview-ajax.php?productID=' + productId);
@@ -700,16 +718,16 @@ Preview Ajax END
  soa radio checkboxes BEGIN
  ***********************/
 function StyleSoaCheckboxes() {
-	$('.s-order .radio-inline,.bx-soa-pp-company').each(function (){
+	$('.s-order .radio-inline,.bx-soa-pp-company').each(function () {
 		var thisInput = $(this).find('input');
 		var thisFigure = thisInput.next('figure');
-		if (!thisFigure.length){
+		if (!thisFigure.length) {
 			$('<figure></figure>').insertAfter(thisInput)
 		}
 	})
 }
 
-$(function($){
+$(function ($) {
 	StyleSoaCheckboxes();
 });
 
@@ -718,7 +736,7 @@ try {
 	BX.addCustomEvent('onAjaxSuccess', function () {
 		StyleSoaCheckboxes();
 	});
-} catch (err) {}
+} catch (err) { }
 
 
 /***********************
@@ -771,109 +789,109 @@ document.addEventListener("DOMContentLoaded", function (event) {
 /* Cursor BEGIN */
 function Cursor(t) {
 	this.cursor = t,
-	this.mouseX = 0,
-	this.mouseY = 0,
-	this.prevMouseX = 0,
-	this.prevMouseY = 0,
-	this.assets = ["butterfly1.png", "butterfly2.png", "butterfly3.png", "butterfly4.png", "butterfly5.png", "butterfly6.png", "butterfly7.png"],
-	this.obCount = 0,
-	this.$container = $(".cursor"),
-	this.adding = !1,
-	this.timer = 150,
-	this.touchInt = null,
-	this.init()
+		this.mouseX = 0,
+		this.mouseY = 0,
+		this.prevMouseX = 0,
+		this.prevMouseY = 0,
+		this.assets = ["butterfly1.png", "butterfly2.png", "butterfly3.png", "butterfly4.png", "butterfly5.png", "butterfly6.png", "butterfly7.png"],
+		this.obCount = 0,
+		this.$container = $(".cursor"),
+		this.adding = !1,
+		this.timer = 150,
+		this.touchInt = null,
+		this.init()
 }
 
-$(document).ready(function() {
-	if ($('.cursor').length){
+$(document).ready(function () {
+	if ($('.cursor').length) {
 		let cursorAnimation = new Cursor;
 	}
 })
-	Cursor.prototype.init = function() {
-		$(window).on("mousemove", $.proxy(this.onMouseMove, this));
-		$(window).on("touchmove", $.proxy(this.onTouchMove, this));
+Cursor.prototype.init = function () {
+	$(window).on("mousemove", $.proxy(this.onMouseMove, this));
+	$(window).on("touchmove", $.proxy(this.onTouchMove, this));
+}
+
+Cursor.prototype.onMouseMove = function (t) {
+	this.mouseX = t.clientX;
+	this.mouseY = t.clientY;
+	this.addGraphic(this.mouseX, this.mouseY, !1);
+}
+
+Cursor.prototype.onTouchMove = function (t) {
+	let e = t.originalEvent.touches[0];
+	this.mouseX = e.clientX,
+		this.mouseY = e.clientY,
+		this.addGraphic(this.mouseX, this.mouseY, !1)
+}
+
+Cursor.prototype.onTouchStart = function (t) {
+	let e = t.originalEvent.touches[0];
+	this.mouseX = e.clientX;
+	this.mouseY = e.clientY;
+	for (let n = 0; n < 10; n++) {
+		setTimeout($.proxy(this.addGraphic, this, this.mouseX + n, this.mouseY + n, !0), .2 * n);
 	}
 
-	Cursor.prototype.onMouseMove = function(t) {
-		this.mouseX = t.clientX;
-		this.mouseY = t.clientY;
-		this.addGraphic(this.mouseX, this.mouseY, !1);
-	}
+}
 
-	Cursor.prototype.onTouchMove = function(t) {
-		let e = t.originalEvent.touches[0];
-		this.mouseX = e.clientX,
-			this.mouseY = e.clientY,
-			this.addGraphic(this.mouseX, this.mouseY, !1)
-	}
+Cursor.prototype.onTouchEnd = function (t) {
+	clearInterval(this.touchInt);
+}
 
-	Cursor.prototype.onTouchStart = function(t) {
-		let e = t.originalEvent.touches[0];
-		this.mouseX = e.clientX;
-		this.mouseY = e.clientY;
-		for (let n = 0; n < 10; n++) {
-			setTimeout($.proxy(this.addGraphic, this, this.mouseX + n, this.mouseY + n, !0), .2 * n);
-		}
-
-	}
-
-	Cursor.prototype.onTouchEnd = function(t) {
-		clearInterval(this.touchInt);
-	}
-
-	Cursor.prototype.addGraphic = function(t, e, n) {
-		let i, r, o, s, a, l, c, u, h;
-		this.adding || (this.obCount = this.obCount + 1,
-			i = this.getRandomInt(0, this.assets.length - 1),
-			r = '<img id="ob' + this.obCount + '" class="cursor__object" src="/bitrix/templates/bb1/img/birds/' + this.assets[i] + '">',
-			this.$container.append(r),
-			o = $("#ob" + this.obCount),
-			s = n ? 50 : 20,
-			newXPos = t - 20 + this.getRandomInt(-s, s),
-			newYPos = e - 20 + this.getRandomInt(-s, s),
-			l = !0 !== n ? (a = this.prevMouseX - t,
+Cursor.prototype.addGraphic = function (t, e, n) {
+	let i, r, o, s, a, l, c, u, h;
+	this.adding || (this.obCount = this.obCount + 1,
+		i = this.getRandomInt(0, this.assets.length - 1),
+		r = '<img id="ob' + this.obCount + '" class="cursor__object" src="/bitrix/templates/bb1/img/birds/' + this.assets[i] + '">',
+		this.$container.append(r),
+		o = $("#ob" + this.obCount),
+		s = n ? 50 : 20,
+		newXPos = t - 20 + this.getRandomInt(-s, s),
+		newYPos = e - 20 + this.getRandomInt(-s, s),
+		l = !0 !== n ? (a = this.prevMouseX - t,
 			this.prevMouseY - e) : (a = t - newXPos,
-			e - newYPos),
-			c = 180 * Math.atan2(l, a) / Math.PI - 90,
-			u = this.getRandomArbitrary(.2, .8),
-			TweenMax.set(o, {
-				// rotation: c,
-				x: newXPos,
-				y: newYPos,
-				scale: 0
-			}),
-			(h = new TimelineMax).to(o, {
-				scale: u,
-				duration: this.getRandomArbitrary(.7, 1.2),
-				ease: Power1.easeOut
-			}),
-			h.to(o, {
-				scale: 0,
-				duration: this.getRandomArbitrary(.5, 1),
-				onCompleteParams: [o],
-				ease: Power1.easeIn,
-				onComplete: function(t) {
-					t.remove()
-				}
-			}),
+				e - newYPos),
+		c = 180 * Math.atan2(l, a) / Math.PI - 90,
+		u = this.getRandomArbitrary(.2, .8),
+		TweenMax.set(o, {
+			// rotation: c,
+			x: newXPos,
+			y: newYPos,
+			scale: 0
+		}),
+		(h = new TimelineMax).to(o, {
+			scale: u,
+			duration: this.getRandomArbitrary(.7, 1.2),
+			ease: Power1.easeOut
+		}),
+		h.to(o, {
+			scale: 0,
+			duration: this.getRandomArbitrary(.5, 1),
+			onCompleteParams: [o],
+			ease: Power1.easeIn,
+			onComplete: function (t) {
+				t.remove()
+			}
+		}),
 		!0 !== n && (this.adding = !0,
 			setTimeout($.proxy(this.reset, this), this.timer),
 			this.prevMouseX = t,
 			this.prevMouseY = e))
-	}
+}
 
-	Cursor.prototype.reset = function(t, e) {
-		this.adding = !1
-	}
+Cursor.prototype.reset = function (t, e) {
+	this.adding = !1
+}
 
-	Cursor.prototype.getRandomInt = function(t, e) {
-		return t = Math.ceil(t),
-			e = Math.floor(e),
+Cursor.prototype.getRandomInt = function (t, e) {
+	return t = Math.ceil(t),
+		e = Math.floor(e),
 		Math.floor(Math.random() * (e - t + 1)) + t
-	}
+}
 
-	Cursor.prototype.getRandomArbitrary = function(t, e) {
-		return Math.random() * (e - t) + t
-	}
-;
+Cursor.prototype.getRandomArbitrary = function (t, e) {
+	return Math.random() * (e - t) + t
+}
+	;
 /* Cursor END */
