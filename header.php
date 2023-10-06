@@ -219,6 +219,7 @@
 
 
 	<header class="s-top-panel compensate-for-scrollbar">
+		<div class="marquee" style="width: 100%; height: 25px; background-color: #f7adad;"> <span> СКИДКА -20% НА ВСЕ ТОВАРЫ ПО ПОЛНОЙ ЦЕНЕ ПО ПРОМОКОДУ: OCTOBER20 </span> </div>
 		<div class="container">
 
 			<div class="burger">
